@@ -1,0 +1,112 @@
+set_location_assignment PIN_J14 -to VGA_B[7]
+set_location_assignment PIN_G15 -to VGA_B[6]
+set_location_assignment PIN_F15 -to VGA_B[5]
+set_location_assignment PIN_H14 -to VGA_B[4]
+set_location_assignment PIN_F14 -to VGA_B[3]
+set_location_assignment PIN_H13 -to VGA_B[2]
+set_location_assignment PIN_G13 -to VGA_B[1]
+set_location_assignment PIN_B13 -to VGA_B[0]
+set_location_assignment PIN_F10 -to VGA_BLANK_N
+set_location_assignment PIN_A11 -to VGA_CLK
+set_location_assignment PIN_E11 -to VGA_G[7]
+set_location_assignment PIN_F11 -to VGA_G[6]
+set_location_assignment PIN_G12 -to VGA_G[5]
+set_location_assignment PIN_G11 -to VGA_G[4]
+set_location_assignment PIN_G10 -to VGA_G[3]
+set_location_assignment PIN_H12 -to VGA_G[2]
+set_location_assignment PIN_J10 -to VGA_G[1]
+set_location_assignment PIN_J9 -to VGA_G[0]
+set_location_assignment PIN_B11 -to VGA_HS
+set_location_assignment PIN_F13 -to VGA_R[7]
+set_location_assignment PIN_E12 -to VGA_R[6]
+set_location_assignment PIN_D12 -to VGA_R[5]
+set_location_assignment PIN_C12 -to VGA_R[4]
+set_location_assignment PIN_B12 -to VGA_R[3]
+set_location_assignment PIN_E13 -to VGA_R[2]
+set_location_assignment PIN_C13 -to VGA_R[1]
+set_location_assignment PIN_A13 -to VGA_R[0]
+set_location_assignment PIN_C10 -to VGA_SYNC_N
+set_location_assignment PIN_D11 -to VGA_VS
+set_location_assignment PIN_AA14 -to rst_n
+set_location_assignment PIN_AF14 -to Clk
+
+# SDRAM 引脚配置（基于 DE1-SoC 手册）
+# 地址线 ADDR[12:0]
+set_location_assignment PIN_AK14 -to ADDR[0]
+set_location_assignment PIN_AH14 -to ADDR[1]
+set_location_assignment PIN_AG15 -to ADDR[2]
+set_location_assignment PIN_AE14 -to ADDR[3]
+set_location_assignment PIN_AB15 -to ADDR[4]
+set_location_assignment PIN_AC14 -to ADDR[5]
+set_location_assignment PIN_AD14 -to ADDR[6]
+set_location_assignment PIN_AF15 -to ADDR[7]
+set_location_assignment PIN_AH15 -to ADDR[8]
+set_location_assignment PIN_AG13 -to ADDR[9]
+set_location_assignment PIN_AG12 -to ADDR[10]
+set_location_assignment PIN_AH13 -to ADDR[11]
+set_location_assignment PIN_AJ14 -to ADDR[12]
+
+# 数据线 DQ[15:0]
+set_location_assignment PIN_AK6  -to DQ[0]
+set_location_assignment PIN_AJ7  -to DQ[1]
+set_location_assignment PIN_AK7  -to DQ[2]
+set_location_assignment PIN_AK8  -to DQ[3]
+set_location_assignment PIN_AK9  -to DQ[4]
+set_location_assignment PIN_AG10 -to DQ[5]
+set_location_assignment PIN_AK11 -to DQ[6]
+set_location_assignment PIN_AJ11 -to DQ[7]
+set_location_assignment PIN_AH10 -to DQ[8]
+set_location_assignment PIN_AJ10 -to DQ[9]
+set_location_assignment PIN_AJ9  -to DQ[10]
+set_location_assignment PIN_AH9  -to DQ[11]
+set_location_assignment PIN_AH8  -to DQ[12]
+set_location_assignment PIN_AH7  -to DQ[13]
+set_location_assignment PIN_AJ6  -to DQ[14]
+set_location_assignment PIN_AJ5  -to DQ[15]
+
+# Bank 地址线 BANK[1:0]
+set_location_assignment PIN_AF13 -to BANK[0]
+set_location_assignment PIN_AJ12 -to BANK[1]
+
+# 字节掩码 DQM[1:0]（对应 LDQM/UDQM）
+set_location_assignment PIN_AB13 -to DQM[0]
+set_location_assignment PIN_AK12 -to DQM[1]
+
+# 控制信号
+set_location_assignment PIN_AE13 -to RAS
+set_location_assignment PIN_AF11 -to CAS
+set_location_assignment PIN_AA13 -to WE
+set_location_assignment PIN_AG11 -to CS
+set_location_assignment PIN_AK13 -to CKE
+
+# 时钟信号（注意：手册里 DRAM_CLK 是 PIN_AH12，你如果单独用的话可以加上）
+# set_location_assignment PIN_AH12 -to DRAM_CLK
+
+
+# --------------------------
+# 2. 所有 SDRAM 引脚设置为 3.3V LVTTL 电平标准
+# --------------------------
+# 地址线
+for {set i 0} {$i <= 12} {incr i} {
+    set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADDR[$i]
+}
+
+# 数据线
+for {set i 0} {$i <= 15} {incr i} {
+    set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DQ[$i]
+}
+
+# Bank 地址线
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BANK[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BANK[1]
+
+# 字节掩码
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DQM[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DQM[1]
+
+# 控制信号
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RAS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CAS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to WE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CKE

@@ -1,0 +1,19 @@
+
+State Machine - |uart_sdram_vga|uart_rx:u_uart_rx|Rxd_state
+Name Rxd_state.STOP_RX Rxd_state.1000 Rxd_state.0111 Rxd_state.0110 Rxd_state.0101 Rxd_state.0100 Rxd_state.0011 Rxd_state.0010 Rxd_state.0001 Rxd_state.0000 
+Rxd_state.0000 0 0 0 0 0 0 0 0 0 0 
+Rxd_state.0001 0 0 0 0 0 0 0 0 1 1 
+Rxd_state.0010 0 0 0 0 0 0 0 1 0 1 
+Rxd_state.0011 0 0 0 0 0 0 1 0 0 1 
+Rxd_state.0100 0 0 0 0 0 1 0 0 0 1 
+Rxd_state.0101 0 0 0 0 1 0 0 0 0 1 
+Rxd_state.0110 0 0 0 1 0 0 0 0 0 1 
+Rxd_state.0111 0 0 1 0 0 0 0 0 0 1 
+Rxd_state.1000 0 1 0 0 0 0 0 0 0 1 
+Rxd_state.STOP_RX 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|auto_ref_state
+Name auto_ref_state.auto_refresh_wait auto_ref_state.auto_refresh_nop auto_ref_state.auto_refresh 
+auto_ref_state.auto_refresh_wait 0 0 0 
+auto_ref_state.auto_refresh 1 0 1 
+auto_ref_state.auto_refresh_nop 1 1 0 

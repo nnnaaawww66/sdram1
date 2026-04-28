@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+executing command line: ip-make-simscript --nativelink-mode --output-directory=uart_sdram_vga_iputf_input --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_108.spd --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_65_95.spd --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_49.spd --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56.spd --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75.spd --spd=D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m.spd 
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  RTL
+Family                :  cyclonev
+Quartus root          :  d:/altera13.1/13.1/quartus/bin64/
+Quartus sim root      :  d:/altera13.1/13.1/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  
+Sim SDF file          :  
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script d:/altera13.1/13.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File uart_sdram_vga_run_msim_rtl_verilog.do already exists - backing up current file as uart_sdram_vga_run_msim_rtl_verilog.do.bak11
+Info: Spawning ModelSim Simulation software 

@@ -1,0 +1,95 @@
+`timescale 1ns / 1ps
+
+module tb_uart_sdram_vga();
+
+    // 基础信号
+    reg         Clk;
+    reg         rst_n;
+    reg         Rxd;
+    
+    // 连线定义
+    wire [6:0]  write_wrusedw_seg1, write_wrusedw_seg0;
+    wire [6:0]  read_wrusedw_seg3, read_wrusedw_seg2, read_wrusedw_seg1, read_wrusedw_seg0;
+
+    // 参数定义
+    parameter CLK_PERIOD = 20;          // 50MHz
+    parameter UART_BIT   = 8680;        // 115200波特率 (1/115200 * 10^9)
+
+    // 实例化顶层模块
+    uart_sdram_vga uut (
+        .Clk(Clk),
+        .rst_n(rst_n),
+        .Rxd(Rxd),
+        .write_wrusedw_seg1(write_wrusedw_seg1),
+        .write_wrusedw_seg0(write_wrusedw_seg0),
+        .read_wrusedw_seg3(read_wrusedw_seg3),
+        .read_wrusedw_seg2(read_wrusedw_seg2),
+        .read_wrusedw_seg1(read_wrusedw_seg1),
+        .read_wrusedw_seg0(read_wrusedw_seg0)
+        // 其他SDRAM和VGA引脚悬空即可
+    );
+
+    // 模拟内部 PLL 锁定，强制让系统复位释放
+    // 因为 top 里面有 sys_rst_n = rst_n && locked
+    initial begin
+        force uut.locked = 1'b1; 
+    end
+
+    // 时钟产生
+    initial begin
+        Clk = 0;
+        forever #(CLK_PERIOD/2) Clk = ~Clk;
+    end
+
+    // 定义发送 8-bit 数据的任务
+    task uart_send_byte(input [7:0] data);
+        integer i;
+        begin
+            Rxd = 0; // 起始位
+            #(UART_BIT);
+            for(i=0; i<8; i=i+1) begin
+                Rxd = data[i]; // 数据位 (LSB first)
+                #(UART_BIT);
+            end
+            Rxd = 1; // 停止位
+            #(UART_BIT);
+            #(UART_BIT); // 额外等待
+        end
+    endtask
+
+    // 测试流程
+    initial begin
+        // 初始状态
+        rst_n = 0;
+        Rxd   = 1;
+        #200;
+        rst_n = 1;
+        #1000;
+
+        // 模拟串口发送数据 0x55 (对应二进制 01010101)
+        // 这将导致内部 uart_rx 产生一次 write_en 脉冲
+        $display("Sending Byte 1: 0x55...");
+        uart_send_byte(8'h55);
+        
+        #10000; // 等待处理时间
+
+        // 模拟发送第二个数据 0xAA
+        $display("Sending Byte 2: 0xAA...");
+        uart_send_byte(8'hAA);
+
+        // 注意：如果你想在仿真里看到计数器变动
+        // 必须等到 top 里的 refresh_cnt 计满 12,499,999 次（约0.25秒）
+        // 建议在仿真时手动将代码里的 12499999 改为 50000 左右
+        #200000; 
+        
+        $display("UART Simulation Finished.");
+        $stop;
+    end
+
+    // 观察 write_en 是否产生
+    initial begin
+        $monitor("Time:%t | Rxd:%b | write_en:%b | latched:%b | seg_cnt:%d", 
+                  $time, Rxd, uut.write_en, uut.write_en_latched, uut.wr_count_reg);
+    end
+
+endmodule

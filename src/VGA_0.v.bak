@@ -1,0 +1,260 @@
+`include "disp_param_conf.v"
+module VGA_0(
+	input sys_clk_50m,
+	input rst_n,
+//	input [23:0] DATA,
+	output reg [7:0] VGA_R,
+	output reg [7:0] VGA_G,
+	output reg [7:0] VGA_B,
+	output VGA_CLK,
+	output reg VGA_BLANK_N,
+	output reg VGA_HS,
+	output reg VGA_VS,
+	output VGA_SYNC_N
+);
+
+reg [23:0] DATA;
+
+localparam BLACK=24'h000000;
+localparam BLUE=24'h0000FF;
+localparam RED=24'hFF0000;
+localparam PURPPLE=24'hFF00FF;
+localparam GREEN=24'h00FF00;
+localparam CYAN=24'h00FFFF;
+localparam YELLOW=24'hFFFF00;
+localparam WHITE=24'hFFFFFF;
+
+// 像素色彩生成 —— 全参数化、自适应所有分辨率、居中对称
+always@(posedge VGA_CLK) begin
+    // ==============================
+    // 第一步：棋盘格背景（自适应大小）
+    // 用 1/20 有效区域作为格子大小，保证所有分辨率都好看
+    // ==============================
+    if( ((H_cnt / (`H_Data/40)) + (V_cnt / (`V_Data/30))) % 2 == 0 )
+        DATA <= CYAN;
+    else
+        DATA <= BLACK;
+
+    // ==============================
+    // 第二步：白色外边框（占有效区域 2%）
+    // ==============================
+    if( H_cnt <= H_Data_start + (`H_Data/50)            ||
+        H_cnt >= H_Data_end   - (`H_Data/50)            ||
+        V_cnt <= V_Data_start + (`V_Data/50)            ||
+        V_cnt >= V_Data_end   - (`V_Data/50)  )
+        DATA <= WHITE;
+
+    // ==============================
+    // 第三步：正中央红色正方形（宽高 = 有效区域 1/3）
+    // 严格居中对称
+    // ==============================
+    if( H_cnt >= (H_Data_start + H_Data_end - `H_Data/3)/2  &&
+        H_cnt <= (H_Data_start + H_Data_end + `H_Data/3)/2  &&
+        V_cnt >= (V_Data_start + V_Data_end - `V_Data/3)/2  &&
+        V_cnt <= (V_Data_start + V_Data_end + `V_Data/3)/2  )
+        DATA <= RED;
+
+    // ==============================
+    // 第四步：中央绿色十字（十字宽度 = 有效区域 1/25）
+    // 绝对居中
+    // ==============================
+    if( (H_cnt >= (H_Data_start + H_Data_end - `H_Data/25)/2  &&
+         H_cnt <= (H_Data_start + H_Data_end + `H_Data/25)/2  &&
+         V_cnt >= (V_Data_start + V_Data_end - `V_Data/3)/2   &&
+         V_cnt <= (V_Data_start + V_Data_end + `V_Data/3)/2 ) ||
+
+        (V_cnt >= (V_Data_start + V_Data_end - `V_Data/25)/2  &&
+         V_cnt <= (V_Data_start + V_Data_end + `V_Data/25)/2  &&
+         H_cnt >= (H_Data_start + H_Data_end - `H_Data/3)/2   &&
+         H_cnt <= (H_Data_start + H_Data_end + `H_Data/3)/2 ))
+        DATA <= GREEN;
+
+    // ==============================
+    // 第五步：黄色分割线（三等分屏幕）
+    // ==============================
+    if( H_cnt == H_Data_start + `H_Data/4               ||
+        H_cnt == H_Data_start + `H_Data/2               ||
+        H_cnt == H_Data_start + (`H_Data*3)/4           ||
+        V_cnt == V_Data_start + `V_Data/4               ||
+        V_cnt == V_Data_start + `V_Data/2               ||
+        V_cnt == V_Data_start + (`V_Data*3)/4 )
+        DATA <= YELLOW;
+
+    // ==============================
+    // 第六步：四个角落蓝色小方块（自适应大小）
+    // 大小 = 有效区域 1/8
+    // ==============================
+    // 左上角
+    if( H_cnt >= H_Data_start + `H_Data/50                &&
+        H_cnt <= H_Data_start + `H_Data/8                 &&
+        V_cnt >= V_Data_start + `V_Data/50                &&
+        V_cnt <= V_Data_start + `V_Data/8  )
+        DATA <= BLUE;
+    // 右上角
+    if( H_cnt >= H_Data_end   - `H_Data/8                 &&
+        H_cnt <= H_Data_end   - `H_Data/50                &&
+        V_cnt >= V_Data_start + `V_Data/50                &&
+        V_cnt <= V_Data_start + `V_Data/8  )
+        DATA <= BLUE;
+    // 左下角
+    if( H_cnt >= H_Data_start + `H_Data/50                &&
+        H_cnt <= H_Data_start + `H_Data/8                 &&
+        V_cnt >= V_Data_end   - `V_Data/8                 &&
+        V_cnt <= V_Data_end   - `V_Data/50  )
+        DATA <= BLUE;
+    // 右下角
+    if( H_cnt >= H_Data_end   - `H_Data/8                 &&
+        H_cnt <= H_Data_end   - `H_Data/50                &&
+        V_cnt >= V_Data_end   - `V_Data/8                 &&
+        V_cnt <= V_Data_end   - `V_Data/50  )
+        DATA <= BLUE;
+end
+
+
+//PLL
+wire clk_25m, clk_36m, clk_75m;
+wire clk_40m, clk_56m;
+wire clk_65m, clk_95m;
+wire clk_108m;
+// ======================================================
+// 按 分辨率宏定义 → 自动选择并例化 对应 PLL
+// ======================================================
+`ifdef Resolution_640x480_60Hz
+    PLL_25_36_75 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (clk_25m),     
+        .outclk_1 (),            
+        .outclk_2 (),
+        .locked   (locked)
+    );
+`elsif Resolution_640x480_85Hz
+    PLL_25_36_75 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (),
+        .outclk_1 (clk_36m),      
+        .outclk_2 (),
+        .locked   (locked)
+    );
+`elsif Resolution_1024x768_70Hz
+    PLL_25_36_75 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (),
+        .outclk_1 (),
+        .outclk_2 (clk_75m),     
+        .locked   (locked)
+    );
+`elsif Resolution_800x600_60Hz
+    PLL_40_56 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (clk_40m),
+        .outclk_1 (),
+        .locked   (locked)
+    );
+`elsif Resolution_800x600_85Hz
+    PLL_40_56 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (),
+        .outclk_1 (clk_56m),
+        .locked   (locked)
+    );
+`elsif Resolution_1024x768_60Hz
+    PLL_65_95 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (clk_65m),
+        .outclk_1 (),
+        .locked   (locked)
+    );
+`elsif Resolution_1024x768_85Hz
+    PLL_65_95 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (),
+        .outclk_1 (clk_95m),
+        .locked   (locked)
+    );
+`elsif Resolution_1280x1024_60Hz
+    PLL_108 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (clk_108m),
+        .locked   (locked)
+    );
+`else
+    // 默认：不例化任何PLL
+    assign locked = 1'b0;
+`endif
+
+
+// 全局统一锁定信号
+wire locked;
+wire sys_locked = locked;
+wire sys_rst_n  = sys_locked & rst_n;
+
+//pixel clock
+assign VGA_CLK = `PIXEL_CLK;
+
+//行&场方向 pixel&line计数
+reg [11:0] H_cnt;
+reg [11:0] V_cnt;
+
+parameter H_Sync_end = `H_Sync - 1;
+parameter H_Data_start = `H_Sync + `H_Back_Porch - 1;
+parameter H_Data_end = `H_Sync + `H_Back_Porch + `H_Data - 1;
+parameter H_end = `H_Total - 1;
+
+parameter V_Sync_end = `V_Sync - 1;
+//parameter V_Sync_end = 1;
+parameter V_Data_start = `V_Sync + `V_Back_Porch - 1;
+parameter V_Data_end = `V_Sync + `V_Back_Porch + `V_Data - 1;
+parameter V_end = `V_Total - 1;
+
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)
+		H_cnt<=0;
+	else if(H_cnt==H_end)
+		H_cnt<=0;
+	else 
+		H_cnt<=H_cnt+1'd1;
+		
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)
+		V_cnt<=0;
+	else if(V_cnt==V_end && H_cnt==H_end)
+		V_cnt<=0;
+	else if(H_cnt==H_end)
+		V_cnt<=V_cnt+1'd1;
+	
+//VGA_BLANK_N消隐信号
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)
+		VGA_BLANK_N<=0;
+	else 
+		VGA_BLANK_N<=(H_cnt > H_Data_start) && (H_cnt <= H_Data_end) && (V_cnt > V_Data_start) && (V_cnt <= V_Data_end);
+
+//H_Sync & V_Sync
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)begin
+		VGA_HS<=0;
+	end
+	else begin
+		VGA_HS<=(H_cnt <= H_Sync_end)?0:1;
+		VGA_VS<=(V_cnt <= V_Sync_end)?0:1;
+	end 
+
+assign VGA_SYNC_N=0;
+
+//DATA
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)
+		{VGA_R,VGA_G,VGA_B}<=0;
+	else if(VGA_BLANK_N)
+		{VGA_R,VGA_G,VGA_B}<=DATA;
+		
+
+endmodule 

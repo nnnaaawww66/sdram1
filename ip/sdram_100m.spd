@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="sdram_100m_sim/sdram_100m.vo" type="VERILOG" />
+ <topLevel name="sdram_100m" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
