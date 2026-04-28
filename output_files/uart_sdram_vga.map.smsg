@@ -1,4 +1,4 @@
-Warning (10273): Verilog HDL warning at mt48lc16m16a2.v(1027): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at mt48lc16m16a2.v(1030): extended using "x" or "z"
-Warning (10268): Verilog HDL information at mt48lc16m16a2.v(243): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at mt48lc16m16a2.v(1028): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at mt48lc16m16a2.v(1031): extended using "x" or "z"
+Warning (10268): Verilog HDL information at mt48lc16m16a2.v(244): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at sdram_write.v(257): always construct contains both blocking and non-blocking assignments

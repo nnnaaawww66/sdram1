@@ -32,12 +32,11 @@ module sdram_read(
 reg sdram_to_fifo_en;
 wire wrfull;
 wire wrempty;
-reg [15:0] rd_data;
 wire [15:0] rdusedw;
 
 rd_fifo u_rd_fifo (
 	.aclr    (~rst_n),        // 复位
-	.data    (rd_data),			// 从SDRAM读出的数据
+	.data    (DQ),			// 从SDRAM读出的数据
 	.rdclk   (clk_out),      // 读时钟（比如out时钟）
 	.rdreq   (fifo_to_out_en),   // 读请求（你要读就给1）
 	.wrclk   (Clk),    		// 写时钟（SDRAM工作时钟）
@@ -107,22 +106,26 @@ always@(posedge Clk or negedge rst_n)
 				rd_state<=rd_command;
 			end 
 			rd_command	     :begin
-				if(meet_tRAS)begin 
-					data_cnt<=data_cnt+1'd1;
-					rd_COLUMN<=rd_COLUMN+1'd1;
-				end 
+				data_cnt<=data_cnt+1'd1;
+				rd_COLUMN<=rd_COLUMN+1'd1;
 				
-				if(sys_req && meet_tRAS)
-					rd_state<=rd_precharge;
+				if(sys_req)
+					if(meet_tRAS)
+						rd_state<=rd_precharge;
+					else 
+						rd_state<=rd_wait_tRAS;
 					
-				if(data_cnt==data_amount-1 && meet_tRAS)begin
+				if(data_cnt==data_amount-1)begin
 					if(meet_tRAS)
 						rd_state<=rd_precharge;
 					else 
 						rd_state<=rd_wait_tRAS;
 				end 
-				else if((sys_busy || wrusedw>=16'd65520 || wrfull || ((wrfull || wrusedw>=16'd12800) && write_req)) && meet_tRAS)
-					rd_state<=rd_precharge;
+				else if((sys_busy || wrusedw>=16'd65520 || wrfull || ((wrfull || wrusedw>=16'd12800) && write_req)))
+					if(meet_tRAS)
+						rd_state<=rd_precharge;
+					else 
+						rd_state<=rd_wait_tRAS;
 				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1015)begin
 					if(meet_tRAS)
 						rd_state<=rd_precharge;
@@ -155,22 +158,26 @@ always@(posedge Clk or negedge rst_n)
 				end 
 			end
 			rd_reading	     :begin 
-				if(meet_tRAS)begin 
-					data_cnt<=data_cnt+1'd1;
-					rd_COLUMN<=rd_COLUMN+1'd1;
-				end 
+				data_cnt<=data_cnt+1'd1;
+				rd_COLUMN<=rd_COLUMN+1'd1;
 				
-				if(sys_req && meet_tRAS)
-					rd_state<=rd_precharge;
+				if(sys_req)
+					if(meet_tRAS)
+						rd_state<=rd_precharge;
+					else 
+						rd_state<=rd_wait_tRAS;
 					
-				if(data_cnt==(data_amount-1) && meet_tRAS)begin
+				if(data_cnt==(data_amount-1))begin
 					if(meet_tRAS)
 						rd_state<=rd_precharge;
 					else 
 						rd_state<=rd_wait_tRAS;
 				end 
-				else if((sys_busy || wrusedw>=16'd65520 || wrfull || ((wrfull || wrusedw>=16'd12800) && write_req)) && meet_tRAS)
-					rd_state<=rd_precharge;
+				else if((sys_busy || wrusedw>=16'd65520 || wrfull || ((wrfull || wrusedw>=16'd12800) && write_req)))
+					if(meet_tRAS)
+						rd_state<=rd_precharge;
+					else 
+						rd_state<=rd_wait_tRAS;
 				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1015)begin
 					if(meet_tRAS)
 						rd_state<=rd_precharge;
@@ -284,7 +291,6 @@ always@(posedge Clk or negedge rst_n)
 always@(negedge Clk or negedge rst_n)
 	if(!rst_n)begin 
 		sdram_to_fifo_en <= 1'b0;
-		rd_data     <= 16'd0;
 	end 
 	else if(rd_state_r1 == rd_command ||
 			  rd_state_r1 == rd_reading ||
@@ -292,11 +298,10 @@ always@(negedge Clk or negedge rst_n)
 			  (rd_state_r1==rd_active_nop && rd_state==rd_reading && (rd_state_r3 == rd_reading || rd_state_r3 == rd_command)))
 		begin
 		sdram_to_fifo_en <= 1'b1;
-		rd_data     <= DQ;        // 直接采样外部输入
 	end 
 	else begin 
 		sdram_to_fifo_en <= 1'b0;
-	end 
+	end
 
 assign read_busy = (rd_state != rd_idle);
 

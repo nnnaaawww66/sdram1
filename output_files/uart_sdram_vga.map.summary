@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Apr 28 01:18:48 2026
+Analysis & Synthesis Status : Successful - Wed Apr 29 00:54:18 2026
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : uart_sdram_vga
 Top-level Entity Name : uart_sdram_vga
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 679
+Total registers : 671
 Total pins : 113
 Total virtual pins : 0
 Total block memory bits : 1,052,672

@@ -41,6 +41,7 @@
 //`include "test-defines.v"
 `define INIT_CLEAR_MEM_BANKS 
 `define DEBUG 0 
+`define PRELOAD_RAM 1
 
 // Uncomment one of the following to have the appropriate size definitions
 // for the part.

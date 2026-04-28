@@ -1,12 +1,12 @@
 // 分辨率开关
-`define Resolution_640x480_60Hz   1    // 25MHz
+//`define Resolution_640x480_60Hz   1    // 25MHz
 //`define Resolution_640x480_85Hz   1    // 36MHz
 //`define Resolution_800x600_60Hz   1    // 40MHz
 //`define Resolution_800x600_85Hz   1    // 56MHz
 //`define Resolution_1024x768_60Hz  1    // 65MHz
 //`define Resolution_1024x768_70Hz  1    // 75MHz
 //`define Resolution_1024x768_85Hz  1    // 95MHz
-//`define Resolution_1280x1024_60Hz 1    // 108MHz
+`define Resolution_1280x1024_60Hz 1    // 108MHz
 
 // ==============================
 // 640x480@60Hz  25MHz
@@ -159,9 +159,9 @@
 `define PIXEL_CLK        clk_108m
 `define H_Sync           108   // 1.0*108
 `define H_Back_Porch     249   // 2.3*108=248.4→249
-`define H_Data           1286  // 11.9*108=1285.2→1286
+`define H_Data           1280  // 11.9*108=1285.2→1286
 `define H_Front_Porch    44    // 0.4*108=43.2→44
-`define H_Total          1687
+`define H_Total          1681
 
 `define V_Sync           3
 `define V_Back_Porch     38

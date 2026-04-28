@@ -119,7 +119,11 @@ uart_rx u_uart_rx(
 );
 
 wire [23:0] DATA;
-assign DATA={3'b000,data_out[15:11],2'b00,data_out[10:5],3'b000,data_out[4:0]};
+assign DATA = {
+    data_out[15:11], data_out[15:13],  // R5 → R8：复制高3位到低3位
+    data_out[10:5],  data_out[10:9],   // G6 → G8：复制高2位到低2位
+    data_out[4:0],   data_out[4:2]     // B5 → B8：复制高3位到低3位
+};
 
 VGA_0 u_VGA_0(
 	.sys_clk_50m(Clk),
@@ -162,13 +166,13 @@ end
 hex_to_7seg u0(.hex_data(col_r % 10),               .seg(read_wrusedw_seg0));  // 个位
 hex_to_7seg u1(.hex_data((col_r / 10) % 10),        .seg(read_wrusedw_seg1));  // 十位
 hex_to_7seg u2(.hex_data((col_r / 100) % 10),       .seg(read_wrusedw_seg2));  // 百位
-hex_to_7seg u3(.hex_data((col_r / 1000) % 10),      .seg(read_wrusedw_seg3));  // 千位
 
 // 4显示 wr_bank
-hex_to_7seg u4(.hex_data({2'b00, bank_r}),          .seg(write_wrusedw_seg0));
+hex_to_7seg u3(.hex_data({2'b00, bank_r}),          .seg(read_wrusedw_seg3));
 
-// 5显示 wr_row 的个位
-hex_to_7seg u5(.hex_data(row_r % 10),               .seg(write_wrusedw_seg1));
+// 5显示 wr_row 的个位和十位
+hex_to_7seg u4(.hex_data(row_r % 10),               .seg(write_wrusedw_seg0));
+hex_to_7seg u5(.hex_data((row_r / 10) % 10),         .seg(write_wrusedw_seg1));
 
 endmodule 
 

@@ -8,12 +8,12 @@ PLLJITTER	NA
 PLLSPEmax	NA
 PLLSPEmin	NA
 
-PLL_Name	VGA_0:u_VGA_0|PLL_25_36_75:u_pll|PLL_25_36_75_0002:pll_25_36_75_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
-PLLJITTER	22
+PLL_Name	VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	55
 PLLSPEmax	50
 PLLSPEmin	-50
 
-PLL_Name	VGA_0:u_VGA_0|PLL_25_36_75:u_pll|PLL_25_36_75_0002:pll_25_36_75_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLL_Name	VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
 PLLJITTER	NA
 PLLSPEmax	NA
 PLLSPEmin	NA

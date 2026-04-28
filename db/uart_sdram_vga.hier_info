@@ -2088,22 +2088,6 @@ rst_n => meet_tRAS.ACLR
 rst_n => cycle_tRAS_cnt[0].ACLR
 rst_n => cycle_tRAS_cnt[1].ACLR
 rst_n => cycle_tRAS_cnt[2].ACLR
-rst_n => rd_data[0].ACLR
-rst_n => rd_data[1].ACLR
-rst_n => rd_data[2].ACLR
-rst_n => rd_data[3].ACLR
-rst_n => rd_data[4].ACLR
-rst_n => rd_data[5].ACLR
-rst_n => rd_data[6].ACLR
-rst_n => rd_data[7].ACLR
-rst_n => rd_data[8].ACLR
-rst_n => rd_data[9].ACLR
-rst_n => rd_data[10].ACLR
-rst_n => rd_data[11].ACLR
-rst_n => rd_data[12].ACLR
-rst_n => rd_data[13].ACLR
-rst_n => rd_data[14].ACLR
-rst_n => rd_data[15].ACLR
 rst_n => sdram_to_fifo_en.ACLR
 wrusedw[0] <= rd_fifo:u_rd_fifo.wrusedw
 wrusedw[1] <= rd_fifo:u_rd_fifo.wrusedw
@@ -2148,7 +2132,10 @@ sys_busy => always1.IN0
 write_req => always1.IN1
 write_req => always1.IN1
 write_busy => always1.IN1
-sys_req => always1.IN1
+sys_req => rd_state.OUTPUTSELECT
+sys_req => rd_state.OUTPUTSELECT
+sys_req => rd_state.OUTPUTSELECT
+sys_req => rd_state.OUTPUTSELECT
 sys_req => always1.IN1
 sys_req => always1.IN1
 read_busy <= Equal17.DB_MAX_OUTPUT_PORT_TYPE
@@ -2194,22 +2181,22 @@ ADDR[11] <= ADDR[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ADDR[12] <= ADDR[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 BANK[0] <= BANK[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 BANK[1] <= BANK[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DQ[0] => rd_data.DATAB
-DQ[1] => rd_data.DATAB
-DQ[2] => rd_data.DATAB
-DQ[3] => rd_data.DATAB
-DQ[4] => rd_data.DATAB
-DQ[5] => rd_data.DATAB
-DQ[6] => rd_data.DATAB
-DQ[7] => rd_data.DATAB
-DQ[8] => rd_data.DATAB
-DQ[9] => rd_data.DATAB
-DQ[10] => rd_data.DATAB
-DQ[11] => rd_data.DATAB
-DQ[12] => rd_data.DATAB
-DQ[13] => rd_data.DATAB
-DQ[14] => rd_data.DATAB
-DQ[15] => rd_data.DATAB
+DQ[0] => DQ[0].IN1
+DQ[1] => DQ[1].IN1
+DQ[2] => DQ[2].IN1
+DQ[3] => DQ[3].IN1
+DQ[4] => DQ[4].IN1
+DQ[5] => DQ[5].IN1
+DQ[6] => DQ[6].IN1
+DQ[7] => DQ[7].IN1
+DQ[8] => DQ[8].IN1
+DQ[9] => DQ[9].IN1
+DQ[10] => DQ[10].IN1
+DQ[11] => DQ[11].IN1
+DQ[12] => DQ[12].IN1
+DQ[13] => DQ[13].IN1
+DQ[14] => DQ[14].IN1
+DQ[15] => DQ[15].IN1
 
 
 |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo
@@ -8406,7 +8393,7 @@ VGA_B[4] <= VGA_B[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[5] <= VGA_B[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[6] <= VGA_B[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[7] <= VGA_B[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VGA_CLK <= PLL_25_36_75:u_pll.outclk_0
+VGA_CLK <= PLL_108:u_pll.outclk_0
 VGA_BLANK_N <= VGA_BLANK_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_HS <= VGA_HS~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_VS <= VGA_VS~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -8423,45 +8410,37 @@ data_amount[8] <= <GND>
 data_amount[9] <= <GND>
 data_amount[10] <= <GND>
 data_amount[11] <= <GND>
-data_amount[12] <= <VCC>
-data_amount[13] <= <VCC>
+data_amount[12] <= <GND>
+data_amount[13] <= <GND>
 data_amount[14] <= <GND>
-data_amount[15] <= <VCC>
+data_amount[15] <= <GND>
 data_amount[16] <= <GND>
 data_amount[17] <= <GND>
 data_amount[18] <= <VCC>
 data_amount[19] <= <GND>
-data_amount[20] <= <GND>
+data_amount[20] <= <VCC>
 read_en <= VGA_BLANK_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uart_sdram_vga|VGA_0:u_VGA_0|PLL_25_36_75:u_pll
+|uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll
 refclk => refclk.IN1
 rst => rst.IN1
-outclk_0 <= PLL_25_36_75_0002:pll_25_36_75_inst.outclk_0
-outclk_1 <= PLL_25_36_75_0002:pll_25_36_75_inst.outclk_1
-outclk_2 <= PLL_25_36_75_0002:pll_25_36_75_inst.outclk_2
-locked <= PLL_25_36_75_0002:pll_25_36_75_inst.locked
+outclk_0 <= PLL_108_0002:pll_108_inst.outclk_0
+locked <= PLL_108_0002:pll_108_inst.locked
 
 
-|uart_sdram_vga|VGA_0:u_VGA_0|PLL_25_36_75:u_pll|PLL_25_36_75_0002:pll_25_36_75_inst
+|uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst
 refclk => refclk.IN1
 rst => rst.IN1
 outclk_0 <= altera_pll:altera_pll_i.outclk
-outclk_1 <= altera_pll:altera_pll_i.outclk
-outclk_2 <= altera_pll:altera_pll_i.outclk
 locked <= altera_pll:altera_pll_i.locked
 
 
-|uart_sdram_vga|VGA_0:u_VGA_0|PLL_25_36_75:u_pll|PLL_25_36_75_0002:pll_25_36_75_inst|altera_pll:altera_pll_i
+|uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i
 refclk => general[0].gpll.I_REFCLK
-refclk => general[1].gpll.I_REFCLK
-refclk => general[2].gpll.I_REFCLK
 refclk1 => ~NO_FANOUT~
 fbclk => ~NO_FANOUT~
 rst => general[0].gpll.I_RST
-rst => general[1].gpll.I_RST
-rst => general[2].gpll.I_RST
 phase_en => ~NO_FANOUT~
 updn => ~NO_FANOUT~
 num_phase_shifts[0] => ~NO_FANOUT~
@@ -8541,8 +8520,6 @@ extswitch => ~NO_FANOUT~
 adjpllin => ~NO_FANOUT~
 cclk => ~NO_FANOUT~
 outclk[0] <= general[0].gpll.O_OUTCLK
-outclk[1] <= general[1].gpll.O_OUTCLK
-outclk[2] <= general[2].gpll.O_OUTCLK
 fboutclk <= general[0].gpll.O_FBOUTCLK
 locked <= general[0].gpll.LOCKED
 phase_done <= <GND>
@@ -8626,8 +8603,6 @@ lvds_clk[1] <= <GND>
 loaden[0] <= <GND>
 loaden[1] <= <GND>
 cascade_out[0] <= <GND>
-cascade_out[1] <= <GND>
-cascade_out[2] <= <GND>
 zdbfbclk <> <GND>
 
 

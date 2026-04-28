@@ -214,7 +214,7 @@ always@(negedge Clk or negedge rst_n)
 		ADDR<=wr_ROW;
 	else if(wr_state==wr_command)
 		ADDR<={2'b00,1'b0,wr_COLUMN};
-	else if(wr_command==wr_precharge)
+	else if(wr_state==wr_precharge)
 		ADDR<=13'b1<<10;
 	else 
 		ADDR<=0;

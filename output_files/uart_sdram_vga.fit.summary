@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr 28 01:04:17 2026
+Fitter Status : Successful - Tue Apr 28 23:07:28 2026
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : uart_sdram_vga
 Top-level Entity Name : uart_sdram_vga
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Preliminary
-Logic utilization (in ALMs) : 664 / 32,070 ( 2 % )
+Logic utilization (in ALMs) : 753 / 32,070 ( 2 % )
 Total registers : 726
 Total pins : 113 / 457 ( 25 % )
 Total virtual pins : 0
