@@ -1,4 +1,5 @@
 // 分辨率开关
+//`define test 1
 //`define Resolution_640x480_60Hz   1    // 25MHz
 //`define Resolution_640x480_85Hz   1    // 36MHz
 //`define Resolution_800x600_60Hz   1    // 40MHz
@@ -8,11 +9,27 @@
 //`define Resolution_1024x768_85Hz  1    // 95MHz
 `define Resolution_1280x1024_60Hz 1    // 108MHz
 
+`ifdef test
+`define PIXEL_CLK        clk_108m
+`define H_Sync           1   
+`define H_Back_Porch     1  
+`define H_Data           3
+`define H_Front_Porch    1   
+`define H_Total          6  
+
+`define V_Sync           1
+`define V_Back_Porch     1
+`define V_Data           3
+`define V_Front_Porch    1
+`define V_Total          6
+`endif
+
 // ==============================
 // 640x480@60Hz  25MHz
 // ==============================
 `ifdef Resolution_640x480_60Hz
 `define PIXEL_CLK        clk_25m
+`define fifo_clk 			 clk_25m_rev
 `define H_Sync           95    // 3.8*25
 `define H_Back_Porch     48    // 1.9*25=47.5 → 48
 `define H_Data           640   // 25.4*25
@@ -157,6 +174,8 @@
 // ==============================
 `ifdef Resolution_1280x1024_60Hz
 `define PIXEL_CLK        clk_108m
+`define fifo_clk         clk_108m_rev
+
 `define H_Sync           108   // 1.0*108
 `define H_Back_Porch     249   // 2.3*108=248.4→249
 `define H_Data           1280  // 11.9*108=1285.2→1286

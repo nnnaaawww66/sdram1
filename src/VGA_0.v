@@ -4,6 +4,9 @@ module VGA_0(
 	input rst_n,
 	input [23:0] DATA,
 	
+	input fifo_empty,
+	output fifo_rd_clk,
+	
 	output reg [7:0] VGA_R,
 	output reg [7:0] VGA_G,
 	output reg [7:0] VGA_B,
@@ -18,13 +21,15 @@ module VGA_0(
 );
 
 assign data_amount=`H_Data * `V_Data ;
-assign read_en=VGA_BLANK_N;
+assign read_en=VGA_BLANK_N & ~fifo_empty;
 
 //PLL
 wire clk_25m, clk_36m, clk_75m;
 wire clk_40m, clk_56m;
 wire clk_65m, clk_95m;
 wire clk_108m;
+
+wire clk_108m_rev,clk_25m_rev;
 
 wire locked;
 
@@ -35,6 +40,7 @@ wire locked;
         .outclk_0 (clk_25m),     
         .outclk_1 (),            
         .outclk_2 (),
+		  .outclk_3(clk_25m_rev),
         .locked   (locked)
     );
 `elsif Resolution_640x480_85Hz
@@ -92,6 +98,15 @@ wire locked;
         .refclk   (sys_clk_50m),
         .rst      (~rst_n),
         .outclk_0 (clk_108m),
+		  .outclk_1 (clk_108m_rev),
+        .locked   (locked)
+    );
+`elsif test
+    PLL_108 u_pll (
+        .refclk   (sys_clk_50m),
+        .rst      (~rst_n),
+        .outclk_0 (clk_108m),
+		  .outclk_1 (clk_108m_rev),
         .locked   (locked)
     );
 `else
@@ -106,6 +121,7 @@ wire sys_rst_n  = sys_locked & rst_n;
 
 //pixel clock
 assign VGA_CLK = `PIXEL_CLK;
+assign fifo_rd_clk = `fifo_clk;
 
 reg [11:0] H_cnt;
 reg [11:0] V_cnt;
@@ -143,6 +159,9 @@ always@(posedge VGA_CLK or negedge sys_rst_n)
 	else 
 		VGA_BLANK_N<=(H_cnt > H_Data_start) && (H_cnt <= H_Data_end) && (V_cnt > V_Data_start) && (V_cnt <= V_Data_end);
 
+//356<H_cnt<=1680
+//40<V_cnt<=1065
+		
 //H_Sync & V_Sync
 always@(posedge VGA_CLK or negedge sys_rst_n)
 	if(!sys_rst_n)begin

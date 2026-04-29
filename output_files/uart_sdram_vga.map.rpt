@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart_sdram_vga
-Wed Apr 29 00:54:18 2026
+Thu Apr 30 00:59:15 2026
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -59,27 +59,29 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
  51. Parameter Settings for User Entity Instance: uart_rx:u_uart_rx
  52. Parameter Settings for User Entity Instance: VGA_0:u_VGA_0
  53. Parameter Settings for User Entity Instance: VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i
- 54. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 55. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
- 56. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
- 57. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 58. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
- 59. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 60. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 61. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 62. dcfifo Parameter Settings by Entity Instance
- 63. Port Connectivity Checks: "hex_to_7seg:u5"
- 64. Port Connectivity Checks: "hex_to_7seg:u4"
- 65. Port Connectivity Checks: "hex_to_7seg:u3"
- 66. Port Connectivity Checks: "hex_to_7seg:u2"
- 67. Port Connectivity Checks: "hex_to_7seg:u1"
- 68. Port Connectivity Checks: "hex_to_7seg:u0"
- 69. Port Connectivity Checks: "sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo"
- 70. Port Connectivity Checks: "sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref"
- 71. Port Connectivity Checks: "sdram_top:u_sdram_top"
- 72. Elapsed Time Per Partition
- 73. Analysis & Synthesis Messages
- 74. Analysis & Synthesis Suppressed Messages
+ 54. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5
+ 55. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
+ 56. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 57. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 58. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 59. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 60. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 61. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 62. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 63. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 64. dcfifo Parameter Settings by Entity Instance
+ 65. Port Connectivity Checks: "hex_to_7seg:u5"
+ 66. Port Connectivity Checks: "hex_to_7seg:u4"
+ 67. Port Connectivity Checks: "hex_to_7seg:u3"
+ 68. Port Connectivity Checks: "hex_to_7seg:u2"
+ 69. Port Connectivity Checks: "hex_to_7seg:u1"
+ 70. Port Connectivity Checks: "hex_to_7seg:u0"
+ 71. Port Connectivity Checks: "sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo"
+ 72. Port Connectivity Checks: "sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref"
+ 73. Port Connectivity Checks: "sdram_top:u_sdram_top"
+ 74. Elapsed Time Per Partition
+ 75. Analysis & Synthesis Messages
+ 76. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -105,13 +107,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 29 00:54:18 2026       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 30 00:59:15 2026       ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                   ; uart_sdram_vga                              ;
 ; Top-level Entity Name           ; uart_sdram_vga                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 671                                         ;
+; Total registers                 ; 672                                         ;
 ; Total pins                      ; 113                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,052,672                                   ;
@@ -293,17 +295,22 @@ applicable agreement for further details.
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera13.1/13.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;            ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera13.1/13.1/quartus/libraries/megafunctions/abs_divider.inc     ;            ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera13.1/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;            ;
-; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_ibm.tdf            ;            ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_olh.tdf       ;            ;
-; db/alt_u_div_lve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_lve.tdf             ;            ;
-; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_l3m.tdf            ;            ;
-; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_hbm.tdf            ;            ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_nlh.tdf       ;            ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_kve.tdf             ;            ;
 ; db/lpm_divide_h3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_h3m.tdf            ;            ;
 ; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_klh.tdf       ;            ;
 ; db/alt_u_div_eve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_eve.tdf             ;            ;
-; db/lpm_divide_ebm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_ebm.tdf            ;            ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_5dm.tdf            ;            ;
+; db/sign_div_unsign_bnh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_bnh.tdf       ;            ;
+; db/alt_u_div_s2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_s2f.tdf             ;            ;
+; db/lpm_divide_n3m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_n3m.tdf            ;            ;
+; db/sign_div_unsign_qlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_qlh.tdf       ;            ;
+; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_qve.tdf             ;            ;
+; db/lpm_divide_1dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_1dm.tdf            ;            ;
+; db/sign_div_unsign_7nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_7nh.tdf       ;            ;
+; db/alt_u_div_k2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_k2f.tdf             ;            ;
+; db/lpm_divide_nbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_nbm.tdf            ;            ;
+; db/sign_div_unsign_tlh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/sign_div_unsign_tlh.tdf       ;            ;
+; db/alt_u_div_00f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/alt_u_div_00f.tdf             ;            ;
+; db/lpm_divide_kbm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Altera13.1/Projects/uart_sdram_vga/db/lpm_divide_kbm.tdf            ;            ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+------------+
 
 
@@ -312,28 +319,28 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                          ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 778                                                                                            ;
+; Estimate of Logic utilization (ALMs needed) ; 1016                                                                                           ;
 ;                                             ;                                                                                                ;
-; Combinational ALUT usage for logic          ; 1334                                                                                           ;
+; Combinational ALUT usage for logic          ; 1810                                                                                           ;
 ;     -- 7 input functions                    ; 2                                                                                              ;
-;     -- 6 input functions                    ; 160                                                                                            ;
-;     -- 5 input functions                    ; 99                                                                                             ;
-;     -- 4 input functions                    ; 171                                                                                            ;
-;     -- <=3 input functions                  ; 902                                                                                            ;
+;     -- 6 input functions                    ; 168                                                                                            ;
+;     -- 5 input functions                    ; 94                                                                                             ;
+;     -- 4 input functions                    ; 248                                                                                            ;
+;     -- <=3 input functions                  ; 1298                                                                                           ;
 ;                                             ;                                                                                                ;
-; Dedicated logic registers                   ; 671                                                                                            ;
+; Dedicated logic registers                   ; 672                                                                                            ;
 ;                                             ;                                                                                                ;
 ; I/O pins                                    ; 113                                                                                            ;
 ; Total MLAB memory bits                      ; 0                                                                                              ;
 ; Total block memory bits                     ; 1052672                                                                                        ;
 ; Total DSP Blocks                            ; 0                                                                                              ;
-; Total PLLs                                  ; 2                                                                                              ;
-;     -- PLLs                                 ; 2                                                                                              ;
+; Total PLLs                                  ; 3                                                                                              ;
+;     -- PLLs                                 ; 3                                                                                              ;
 ;                                             ;                                                                                                ;
 ; Maximum fan-out node                        ; sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 534                                                                                            ;
-; Total fan-out                               ; 11458                                                                                          ;
-; Average fan-out                             ; 4.79                                                                                           ;
+; Total fan-out                               ; 12964                                                                                          ;
+; Average fan-out                             ; 4.52                                                                                           ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 
 
@@ -342,7 +349,7 @@ applicable agreement for further details.
 +-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                   ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |uart_sdram_vga                                     ; 1334 (31)         ; 671 (50)     ; 1052672           ; 0          ; 113  ; 0            ; |uart_sdram_vga                                                                                                                                                                       ; work         ;
+; |uart_sdram_vga                                     ; 1810 (31)         ; 672 (51)     ; 1052672           ; 0          ; 113  ; 0            ; |uart_sdram_vga                                                                                                                                                                       ; work         ;
 ;    |VGA_0:u_VGA_0|                                  ; 42 (42)           ; 51 (51)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0                                                                                                                                                         ; work         ;
 ;       |PLL_108:u_pll|                               ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll                                                                                                                                           ; PLL_108      ;
 ;          |PLL_108_0002:pll_108_inst|                ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst                                                                                                                 ; PLL_108      ;
@@ -350,41 +357,49 @@ applicable agreement for further details.
 ;    |hex_to_7seg:u0|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u0                                                                                                                                                        ; work         ;
 ;    |hex_to_7seg:u1|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u1                                                                                                                                                        ; work         ;
 ;    |hex_to_7seg:u2|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u2                                                                                                                                                        ; work         ;
-;    |hex_to_7seg:u3|                                 ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u3                                                                                                                                                        ; work         ;
+;    |hex_to_7seg:u3|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u3                                                                                                                                                        ; work         ;
 ;    |hex_to_7seg:u4|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u4                                                                                                                                                        ; work         ;
 ;    |hex_to_7seg:u5|                                 ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|hex_to_7seg:u5                                                                                                                                                        ; work         ;
-;    |lpm_divide:Div0|                                ; 71 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0                                                                                                                                                       ; work         ;
-;       |lpm_divide_ebm:auto_generated|               ; 71 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_ebm:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_klh:divider|              ; 71 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider                                                                                             ; work         ;
-;             |alt_u_div_eve:divider|                 ; 71 (71)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_ebm:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                       ; work         ;
-;    |lpm_divide:Div1|                                ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1                                                                                                                                                       ; work         ;
-;       |lpm_divide_hbm:auto_generated|               ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_nlh:divider|              ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                                                                                             ; work         ;
-;             |alt_u_div_kve:divider|                 ; 60 (60)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider                                                                       ; work         ;
-;    |lpm_divide:Div2|                                ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2                                                                                                                                                       ; work         ;
-;       |lpm_divide_ibm:auto_generated|               ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_ibm:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_olh:divider|              ; 104 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                                                                                             ; work         ;
-;             |alt_u_div_lve:divider|                 ; 104 (104)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_lve:divider                                                                       ; work         ;
-;    |lpm_divide:Mod0|                                ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0                                                                                                                                                       ; work         ;
-;       |lpm_divide_h3m:auto_generated|               ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_h3m:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_klh:divider|              ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                             ; work         ;
-;             |alt_u_div_eve:divider|                 ; 75 (75)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                       ; work         ;
-;    |lpm_divide:Mod1|                                ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1                                                                                                                                                       ; work         ;
-;       |lpm_divide_h3m:auto_generated|               ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_h3m:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_klh:divider|              ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                             ; work         ;
-;             |alt_u_div_eve:divider|                 ; 60 (60)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                       ; work         ;
-;    |lpm_divide:Mod2|                                ; 27 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2                                                                                                                                                       ; work         ;
-;       |lpm_divide_h3m:auto_generated|               ; 27 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_h3m:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_klh:divider|              ; 27 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                             ; work         ;
-;             |alt_u_div_eve:divider|                 ; 27 (27)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                       ; work         ;
-;    |lpm_divide:Mod3|                                ; 108 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3                                                                                                                                                       ; work         ;
-;       |lpm_divide_l3m:auto_generated|               ; 108 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_l3m:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_olh:divider|              ; 108 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                                                                                             ; work         ;
-;             |alt_u_div_lve:divider|                 ; 108 (108)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_lve:divider                                                                       ; work         ;
-;    |lpm_divide:Mod4|                                ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4                                                                                                                                                       ; work         ;
-;       |lpm_divide_l3m:auto_generated|               ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_l3m:auto_generated                                                                                                                         ; work         ;
-;          |sign_div_unsign_olh:divider|              ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                                                                                             ; work         ;
-;             |alt_u_div_lve:divider|                 ; 93 (93)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_lve:divider                                                                       ; work         ;
+;    |lpm_divide:Div0|                                ; 137 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0                                                                                                                                                       ; work         ;
+;       |lpm_divide_kbm:auto_generated|               ; 137 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_kbm:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 137 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 137 (137)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div0|lpm_divide_kbm:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Div1|                                ; 174 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1                                                                                                                                                       ; work         ;
+;       |lpm_divide_nbm:auto_generated|               ; 174 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_nbm:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_tlh:divider|              ; 174 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_nbm:auto_generated|sign_div_unsign_tlh:divider                                                                                             ; work         ;
+;             |alt_u_div_00f:divider|                 ; 174 (174)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div1|lpm_divide_nbm:auto_generated|sign_div_unsign_tlh:divider|alt_u_div_00f:divider                                                                       ; work         ;
+;    |lpm_divide:Div2|                                ; 164 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2                                                                                                                                                       ; work         ;
+;       |lpm_divide_1dm:auto_generated|               ; 164 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_1dm:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_7nh:divider|              ; 164 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_1dm:auto_generated|sign_div_unsign_7nh:divider                                                                                             ; work         ;
+;             |alt_u_div_k2f:divider|                 ; 164 (164)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div2|lpm_divide_1dm:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_k2f:divider                                                                       ; work         ;
+;    |lpm_divide:Div3|                                ; 82 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div3                                                                                                                                                       ; work         ;
+;       |lpm_divide_5dm:auto_generated|               ; 82 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div3|lpm_divide_5dm:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_bnh:divider|              ; 82 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div3|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider                                                                                             ; work         ;
+;             |alt_u_div_s2f:divider|                 ; 82 (82)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Div3|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider|alt_u_div_s2f:divider                                                                       ; work         ;
+;    |lpm_divide:Mod0|                                ; 141 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0                                                                                                                                                       ; work         ;
+;       |lpm_divide_n3m:auto_generated|               ; 141 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_n3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 141 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 141 (141)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod0|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Mod1|                                ; 126 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1                                                                                                                                                       ; work         ;
+;       |lpm_divide_n3m:auto_generated|               ; 126 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_n3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 126 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 126 (126)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod1|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Mod2|                                ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2                                                                                                                                                       ; work         ;
+;       |lpm_divide_n3m:auto_generated|               ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_n3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 93 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 93 (93)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod2|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Mod3|                                ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3                                                                                                                                                       ; work         ;
+;       |lpm_divide_n3m:auto_generated|               ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_n3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 60 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 60 (60)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod3|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Mod4|                                ; 18 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4                                                                                                                                                       ; work         ;
+;       |lpm_divide_n3m:auto_generated|               ; 18 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_n3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_qlh:divider|              ; 18 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider                                                                                             ; work         ;
+;             |alt_u_div_qve:divider|                 ; 18 (18)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod4|lpm_divide_n3m:auto_generated|sign_div_unsign_qlh:divider|alt_u_div_qve:divider                                                                       ; work         ;
+;    |lpm_divide:Mod5|                                ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod5                                                                                                                                                       ; work         ;
+;       |lpm_divide_h3m:auto_generated|               ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod5|lpm_divide_h3m:auto_generated                                                                                                                         ; work         ;
+;          |sign_div_unsign_klh:divider|              ; 75 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod5|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider                                                                                             ; work         ;
+;             |alt_u_div_eve:divider|                 ; 75 (75)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|lpm_divide:Mod5|lpm_divide_h3m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_eve:divider                                                                       ; work         ;
 ;    |sdram_100m:u_sdram_100m|                        ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m                                                                                                                                               ; sdram_100m   ;
 ;       |sdram_100m_0002:sdram_100m_inst|             ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst                                                                                                               ; sdram_100m   ;
 ;          |altera_pll:altera_pll_i|                  ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i                                                                                       ; work         ;
@@ -393,7 +408,7 @@ applicable agreement for further details.
 ;       |sdram_read:u_sdram_read|                     ; 362 (158)         ; 315 (88)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read                                                                                                                         ; work         ;
 ;          |rd_fifo:u_rd_fifo|                        ; 204 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo                                                                                                       ; work         ;
 ;             |dcfifo:dcfifo_component|               ; 204 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component                                                                               ; work         ;
-;                |dcfifo_kjs1:auto_generated|         ; 204 (21)          ; 227 (72)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated                                                    ; work         ;
+;                |dcfifo_kjs1:auto_generated|         ; 204 (22)          ; 227 (72)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated                                                    ; work         ;
 ;                   |a_gray2bin_vab:wrptr_g_gray2bin| ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_gray2bin_vab:wrptr_g_gray2bin                    ; work         ;
 ;                   |a_gray2bin_vab:ws_dgrp_gray2bin| ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_gray2bin_vab:ws_dgrp_gray2bin                    ; work         ;
 ;                   |a_graycounter_qdc:wrptr_g1p|     ; 26 (26)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_qdc:wrptr_g1p                        ; work         ;
@@ -405,12 +420,13 @@ applicable agreement for further details.
 ;                   |altsyncram_at91:fifo_ram|        ; 59 (3)            ; 9 (9)        ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram                           ; work         ;
 ;                      |decode_417:decode12|          ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|decode_417:decode12       ; work         ;
 ;                      |mux_3t7:mux13|                ; 48 (48)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|mux_3t7:mux13             ; work         ;
+;                   |cmpr_0v5:rdempty_eq_comp_msb|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|cmpr_0v5:rdempty_eq_comp_msb                       ; work         ;
 ;                   |dffpipe_3dc:rdaclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_3dc:rdaclr                                 ; work         ;
 ;                   |dffpipe_3dc:wraclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_3dc:wraclr                                 ; work         ;
 ;                   |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_ve9:ws_brp                                 ; work         ;
 ;                   |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_ve9:ws_bwp                                 ; work         ;
 ;                   |mux_5r7:rdemp_eq_comp_lsb_mux|   ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux                      ; work         ;
-;                   |mux_5r7:rdemp_eq_comp_msb_mux|   ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_msb_mux                      ; work         ;
+;                   |mux_5r7:rdemp_eq_comp_msb_mux|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_msb_mux                      ; work         ;
 ;                   |mux_5r7:wrfull_eq_comp_lsb_mux|  ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:wrfull_eq_comp_lsb_mux                     ; work         ;
 ;                   |mux_5r7:wrfull_eq_comp_msb_mux|  ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:wrfull_eq_comp_msb_mux                     ; work         ;
 ;       |sdram_write:u_sdram_write|                   ; 123 (57)          ; 163 (56)     ; 4096              ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write                                                                                                                       ; work         ;
@@ -537,12 +553,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 671   ;
+; Total registers                              ; 672   ;
 ; Number of registers using Synchronous Clear  ; 173   ;
 ; Number of registers using Synchronous Load   ; 21    ;
-; Number of registers using Asynchronous Clear ; 664   ;
+; Number of registers using Asynchronous Clear ; 665   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 241   ;
+; Number of registers using Clock Enable       ; 242   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1226,7 +1242,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; fractional_vco_multiplier            ; false          ; String                                                             ;
 ; pll_type                             ; General        ; String                                                             ;
 ; pll_subtype                          ; General        ; String                                                             ;
-; number_of_clocks                     ; 1              ; Signed Integer                                                     ;
+; number_of_clocks                     ; 2              ; Signed Integer                                                     ;
 ; operation_mode                       ; direct         ; String                                                             ;
 ; deserialization_factor               ; 4              ; Signed Integer                                                     ;
 ; data_rate                            ; 0              ; Signed Integer                                                     ;
@@ -1234,8 +1250,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; output_clock_frequency0              ; 108.000000 MHz ; String                                                             ;
 ; phase_shift0                         ; 0 ps           ; String                                                             ;
 ; duty_cycle0                          ; 50             ; Signed Integer                                                     ;
-; output_clock_frequency1              ; 0 MHz          ; String                                                             ;
-; phase_shift1                         ; 0 ps           ; String                                                             ;
+; output_clock_frequency1              ; 108.000000 MHz ; String                                                             ;
+; phase_shift1                         ; 4629 ps        ; String                                                             ;
 ; duty_cycle1                          ; 50             ; Signed Integer                                                     ;
 ; output_clock_frequency2              ; 0 MHz          ; String                                                             ;
 ; phase_shift2                         ; 0 ps           ; String                                                             ;
@@ -1443,18 +1459,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5 ;
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
+; LPM_WIDTHN             ; 10             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 14             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_5dm ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1470,14 +1509,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 16             ; Untyped                ;
+; LPM_WIDTHD             ; 10             ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_1dm ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1493,14 +1555,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 13             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1516,14 +1578,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 7              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_nbm ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1539,14 +1601,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1562,14 +1624,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_ebm ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_kbm ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1585,14 +1647,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1608,14 +1670,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------------+----------------+------------------------+
 ; Parameter Name         ; Value          ; Type                   ;
 +------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHN             ; 16             ; Untyped                ;
 ; LPM_WIDTHD             ; 4              ; Untyped                ;
 ; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
 ; LPM_PIPELINE           ; 0              ; Untyped                ;
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_h3m ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_n3m ; Untyped                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
@@ -1647,13 +1709,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------+-------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hex_to_7seg:u5"                                                                                                                                                                       ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; hex_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex_to_7seg:u5"                                                                                                                                                                      ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                           ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_data ; Input ; Warning  ; Input port expression (10 bits) is wider than the input port (4 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1661,17 +1723,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; hex_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; hex_data ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------+
-; Port Connectivity Checks: "hex_to_7seg:u3"       ;
-+----------------+-------+----------+--------------+
-; Port           ; Type  ; Severity ; Details      ;
-+----------------+-------+----------+--------------+
-; hex_data[3..2] ; Input ; Info     ; Stuck at GND ;
-+----------------+-------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex_to_7seg:u3"                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_data ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1679,7 +1741,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; hex_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; hex_data ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1688,7 +1750,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; hex_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; hex_data ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1697,7 +1759,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; hex_data ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; hex_data ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (4 bits) it drives.  The 12 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
 +----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1726,8 +1788,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port          ; Type   ; Severity ; Details                                                                             ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; write_wrusedw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; read_wrusedw  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rdempty_out   ; Output ; Info     ; Explicitly unconnected                                                              ;
+; wr_ROW        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wr_BANK       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -1746,7 +1808,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Wed Apr 29 00:54:15 2026
+    Info: Processing started: Thu Apr 30 00:59:12 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart_sdram_vga -c uart_sdram_vga
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 16 physical processors detected instead.
 Info (12021): Found 0 design units, including 0 entities, in source file src/timescale.v
@@ -1799,7 +1861,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file ip/sdra
 Info (12021): Found 1 design units, including 1 entities, in source file ip/sdram_100m/sdram_100m_0002.v
     Info (12023): Found entity 1: sdram_100m_0002
 Info (12021): Found 0 design units, including 0 entities, in source file src/uart_sdram_vga_tb.v
+Warning (10236): Verilog HDL Implicit Net warning at uart_sdram_vga.v(96): created implicit net for "fifo_rd_clk"
 Info (12127): Elaborating entity "uart_sdram_vga" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(152): object "bank_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(153): object "row_r" assigned a value but never read
 Info (12128): Elaborating entity "sdram_100m" for hierarchy "sdram_100m:u_sdram_100m"
 Info (12128): Elaborating entity "sdram_100m_0002" for hierarchy "sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst"
 Info (12128): Elaborating entity "altera_pll" for hierarchy "sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i"
@@ -2063,9 +2128,9 @@ Info (12128): Elaborating entity "mux_5r7" for hierarchy "sdram_top:u_sdram_top|
 Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:u_uart_rx"
 Warning (10036): Verilog HDL or VHDL warning at uart_rx.v(25): object "data_ready" assigned a value but never read
 Info (12128): Elaborating entity "VGA_0" for hierarchy "VGA_0:u_VGA_0"
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(20): truncated value with size 32 to match size of target (21)
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(152): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(153): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(23): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(171): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(172): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "PLL_108" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll"
 Info (12128): Elaborating entity "PLL_108_0002" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst"
 Info (12128): Elaborating entity "altera_pll" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i"
@@ -2079,12 +2144,12 @@ Info (12133): Instantiated megafunction "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_000
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
-    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "number_of_clocks" = "2"
     Info (12134): Parameter "output_clock_frequency0" = "108.000000 MHz"
     Info (12134): Parameter "phase_shift0" = "0 ps"
     Info (12134): Parameter "duty_cycle0" = "50"
-    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
-    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "output_clock_frequency1" = "108.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "4629 ps"
     Info (12134): Parameter "duty_cycle1" = "50"
     Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
     Info (12134): Parameter "phase_shift2" = "0 ps"
@@ -2137,49 +2202,19 @@ Info (12133): Instantiated megafunction "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_000
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:u0"
-Info (278001): Inferred 8 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
+Info (278001): Inferred 10 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2"
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "13"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_lve.tdf
-    Info (12023): Found entity 1: alt_u_div_lve
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod4"
-Info (12133): Instantiated megafunction "lpm_divide:Mod4" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "13"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
-    Info (12023): Found entity 1: lpm_divide_l3m
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1"
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2"
-Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod5"
+Info (12133): Instantiated megafunction "lpm_divide:Mod5" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2190,20 +2225,67 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_klh
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eve.tdf
     Info (12023): Found entity 1: alt_u_div_eve
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div3"
+Info (12133): Instantiated megafunction "lpm_divide:Div3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "14"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5dm.tdf
+    Info (12023): Found entity 1: lpm_divide_5dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bnh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s2f.tdf
+    Info (12023): Found entity 1: alt_u_div_s2f
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod4"
+Info (12133): Instantiated megafunction "lpm_divide:Mod4" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ebm.tdf
-    Info (12023): Found entity 1: lpm_divide_ebm
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_n3m.tdf
+    Info (12023): Found entity 1: lpm_divide_n3m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_qlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_qlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
+    Info (12023): Found entity 1: alt_u_div_qve
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2"
+Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1dm.tdf
+    Info (12023): Found entity 1: lpm_divide_1dm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7nh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_k2f.tdf
+    Info (12023): Found entity 1: alt_u_div_k2f
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1"
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_nbm.tdf
+    Info (12023): Found entity 1: lpm_divide_nbm
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_tlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_tlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_00f.tdf
+    Info (12023): Found entity 1: alt_u_div_00f
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "16"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_kbm.tdf
+    Info (12023): Found entity 1: lpm_divide_kbm
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CKE" is stuck at VCC
     Warning (13410): Pin "CS" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
-    Warning (13410): Pin "read_wrusedw_seg3[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored assignments for entity "PLL_25_36_75" -- entity does not exist in design
@@ -2252,19 +2334,19 @@ Warning (20013): Ignored assignments for entity "PLL_65_95_0002" -- entity does 
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity PLL_65_95_0002 -qip ip/PLL_65_95.qip -library PLL_65_95 was ignored
 Info (144001): Generated suppressed messages file D:/Altera13.1/Projects/uart_sdram_vga/output_files/uart_sdram_vga.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 10 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1923 device resources after synthesis - the final resource count might be different
+    Info (16011): Adding 11 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2401 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 94 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 1664 logic cells
+    Info (21061): Implemented 2141 logic cells
     Info (21064): Implemented 144 RAM segments
-    Info (21065): Implemented 2 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 133 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Wed Apr 29 00:54:18 2026
+    Info (21065): Implemented 3 PLLs
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Thu Apr 30 00:59:15 2026
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

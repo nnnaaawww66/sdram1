@@ -8369,6 +8369,8 @@ DATA[20] => VGA_R[4]~reg0.DATAIN
 DATA[21] => VGA_R[5]~reg0.DATAIN
 DATA[22] => VGA_R[6]~reg0.DATAIN
 DATA[23] => VGA_R[7]~reg0.DATAIN
+fifo_empty => read_en.IN1
+fifo_rd_clk <= PLL_108:u_pll.outclk_1
 VGA_R[0] <= VGA_R[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_R[1] <= VGA_R[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VGA_R[2] <= VGA_R[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -8419,13 +8421,14 @@ data_amount[17] <= <GND>
 data_amount[18] <= <VCC>
 data_amount[19] <= <GND>
 data_amount[20] <= <VCC>
-read_en <= VGA_BLANK_N~reg0.DB_MAX_OUTPUT_PORT_TYPE
+read_en <= read_en.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll
 refclk => refclk.IN1
 rst => rst.IN1
 outclk_0 <= PLL_108_0002:pll_108_inst.outclk_0
+outclk_1 <= PLL_108_0002:pll_108_inst.outclk_1
 locked <= PLL_108_0002:pll_108_inst.locked
 
 
@@ -8433,14 +8436,17 @@ locked <= PLL_108_0002:pll_108_inst.locked
 refclk => refclk.IN1
 rst => rst.IN1
 outclk_0 <= altera_pll:altera_pll_i.outclk
+outclk_1 <= altera_pll:altera_pll_i.outclk
 locked <= altera_pll:altera_pll_i.locked
 
 
 |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i
 refclk => general[0].gpll.I_REFCLK
+refclk => general[1].gpll.I_REFCLK
 refclk1 => ~NO_FANOUT~
 fbclk => ~NO_FANOUT~
 rst => general[0].gpll.I_RST
+rst => general[1].gpll.I_RST
 phase_en => ~NO_FANOUT~
 updn => ~NO_FANOUT~
 num_phase_shifts[0] => ~NO_FANOUT~
@@ -8520,6 +8526,7 @@ extswitch => ~NO_FANOUT~
 adjpllin => ~NO_FANOUT~
 cclk => ~NO_FANOUT~
 outclk[0] <= general[0].gpll.O_OUTCLK
+outclk[1] <= general[1].gpll.O_OUTCLK
 fboutclk <= general[0].gpll.O_FBOUTCLK
 locked <= general[0].gpll.LOCKED
 phase_done <= <GND>
@@ -8603,6 +8610,7 @@ lvds_clk[1] <= <GND>
 loaden[0] <= <GND>
 loaden[1] <= <GND>
 cascade_out[0] <= <GND>
+cascade_out[1] <= <GND>
 zdbfbclk <> <GND>
 
 

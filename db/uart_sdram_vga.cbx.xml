@@ -1,15 +1,17 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="uart_sdram_vga">
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_h3m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_ebm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_ibm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_h3m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_l3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_5dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod2" CBX_FILE_NAME="lpm_divide_n3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_kbm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_1dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_n3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_n3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod5" CBX_FILE_NAME="lpm_divide_h3m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_kjs1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_fifo:u_wr_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_gjr1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_hbm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_h3m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_l3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_nbm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_n3m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|uart_sdram_vga|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_n3m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
