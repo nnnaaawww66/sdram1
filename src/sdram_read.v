@@ -1,3 +1,5 @@
+//`define debug 1
+
 module sdram_read(
 	input Clk,
 	input rst_n,
@@ -26,7 +28,12 @@ module sdram_read(
 	output reg [1:0] DQM,
 	output reg [12:0] ADDR,
 	output reg [1:0] BANK,
-	input [15:0] DQ	
+	input [15:0] DQ
+
+	`ifdef dubug
+	,
+	output [22:0] debug_data_cnt
+	`endif
 );
 
 reg sdram_to_fifo_en;
@@ -144,7 +151,7 @@ always@(posedge Clk or negedge rst_n)
 					rd_BANK<=0;
 					rd_ROW<=0;
 				end 
-				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1015)begin
+				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1018)begin
 					data_cnt<=data_cnt+3;
 					rd_COLUMN<=0;
 					rd_BANK<=0;
@@ -178,7 +185,7 @@ always@(posedge Clk or negedge rst_n)
 						rd_state<=rd_precharge;
 					else 
 						rd_state<=rd_wait_tRAS;
-				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1015)begin
+				else if(rd_BANK==2'b11 && rd_COLUMN>=10'd1018)begin
 					if(meet_tRAS)
 						rd_state<=rd_precharge;
 					else 
@@ -294,7 +301,7 @@ always@(negedge Clk or negedge rst_n)
 	end 
 	else if(rd_state_r1 == rd_command ||
 			  rd_state_r1 == rd_reading ||
-			  (rd_state_r1==rd_active && rd_state==rd_command && rd_state_r2!=rd_idle) ||
+			  (rd_state_r1==rd_active && rd_state==rd_command && rd_state_r2!=rd_idle && rd_state_r2!=rd_precharge_nop) ||
 			  (rd_state_r1==rd_active_nop && rd_state==rd_reading && (rd_state_r3 == rd_reading || rd_state_r3 == rd_command)))
 		begin
 		sdram_to_fifo_en <= 1'b1;
@@ -323,5 +330,9 @@ always@(negedge Clk or negedge rst_n)
 		cycle_tRAS_cnt<=cycle_tRAS_cnt+1'd1;
 		meet_tRAS<=0;
 	end 
+	
+`ifdef dubug
+assign debug_data_cnt=data_cnt;
+`endif
 
 endmodule 

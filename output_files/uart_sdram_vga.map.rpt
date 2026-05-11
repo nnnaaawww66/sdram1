@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart_sdram_vga
-Thu Apr 30 00:59:15 2026
+Tue May 12 01:25:56 2026
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -107,13 +107,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 30 00:59:15 2026       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 12 01:25:56 2026       ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                   ; uart_sdram_vga                              ;
 ; Top-level Entity Name           ; uart_sdram_vga                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 672                                         ;
+; Total registers                 ; 673                                         ;
 ; Total pins                      ; 113                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,052,672                                   ;
@@ -319,16 +319,16 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                          ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1016                                                                                           ;
+; Estimate of Logic utilization (ALMs needed) ; 1018                                                                                           ;
 ;                                             ;                                                                                                ;
-; Combinational ALUT usage for logic          ; 1810                                                                                           ;
-;     -- 7 input functions                    ; 2                                                                                              ;
-;     -- 6 input functions                    ; 168                                                                                            ;
-;     -- 5 input functions                    ; 94                                                                                             ;
-;     -- 4 input functions                    ; 248                                                                                            ;
-;     -- <=3 input functions                  ; 1298                                                                                           ;
+; Combinational ALUT usage for logic          ; 1821                                                                                           ;
+;     -- 7 input functions                    ; 4                                                                                              ;
+;     -- 6 input functions                    ; 155                                                                                            ;
+;     -- 5 input functions                    ; 111                                                                                            ;
+;     -- 4 input functions                    ; 245                                                                                            ;
+;     -- <=3 input functions                  ; 1306                                                                                           ;
 ;                                             ;                                                                                                ;
-; Dedicated logic registers                   ; 672                                                                                            ;
+; Dedicated logic registers                   ; 673                                                                                            ;
 ;                                             ;                                                                                                ;
 ; I/O pins                                    ; 113                                                                                            ;
 ; Total MLAB memory bits                      ; 0                                                                                              ;
@@ -339,8 +339,8 @@ applicable agreement for further details.
 ;                                             ;                                                                                                ;
 ; Maximum fan-out node                        ; sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 534                                                                                            ;
-; Total fan-out                               ; 12964                                                                                          ;
-; Average fan-out                             ; 4.52                                                                                           ;
+; Total fan-out                               ; 12878                                                                                          ;
+; Average fan-out                             ; 4.47                                                                                           ;
 +---------------------------------------------+------------------------------------------------------------------------------------------------+
 
 
@@ -349,8 +349,8 @@ applicable agreement for further details.
 +-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                   ; Library Name ;
 +-----------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |uart_sdram_vga                                     ; 1810 (31)         ; 672 (51)     ; 1052672           ; 0          ; 113  ; 0            ; |uart_sdram_vga                                                                                                                                                                       ; work         ;
-;    |VGA_0:u_VGA_0|                                  ; 42 (42)           ; 51 (51)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0                                                                                                                                                         ; work         ;
+; |uart_sdram_vga                                     ; 1821 (31)         ; 673 (51)     ; 1052672           ; 0          ; 113  ; 0            ; |uart_sdram_vga                                                                                                                                                                       ; work         ;
+;    |VGA_0:u_VGA_0|                                  ; 46 (46)           ; 52 (52)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0                                                                                                                                                         ; work         ;
 ;       |PLL_108:u_pll|                               ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll                                                                                                                                           ; PLL_108      ;
 ;          |PLL_108_0002:pll_108_inst|                ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst                                                                                                                 ; PLL_108      ;
 ;             |altera_pll:altera_pll_i|               ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i                                                                                         ; work         ;
@@ -403,16 +403,16 @@ applicable agreement for further details.
 ;    |sdram_100m:u_sdram_100m|                        ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m                                                                                                                                               ; sdram_100m   ;
 ;       |sdram_100m_0002:sdram_100m_inst|             ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst                                                                                                               ; sdram_100m   ;
 ;          |altera_pll:altera_pll_i|                  ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i                                                                                       ; work         ;
-;    |sdram_top:u_sdram_top|                          ; 581 (19)          ; 520 (0)      ; 1052672           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top                                                                                                                                                 ; work         ;
+;    |sdram_top:u_sdram_top|                          ; 588 (19)          ; 520 (0)      ; 1052672           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top                                                                                                                                                 ; work         ;
 ;       |sdram_init_ref:u_sdram_init_ref|             ; 77 (77)           ; 42 (42)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref                                                                                                                 ; work         ;
-;       |sdram_read:u_sdram_read|                     ; 362 (158)         ; 315 (88)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read                                                                                                                         ; work         ;
-;          |rd_fifo:u_rd_fifo|                        ; 204 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo                                                                                                       ; work         ;
-;             |dcfifo:dcfifo_component|               ; 204 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component                                                                               ; work         ;
-;                |dcfifo_kjs1:auto_generated|         ; 204 (22)          ; 227 (72)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated                                                    ; work         ;
+;       |sdram_read:u_sdram_read|                     ; 369 (163)         ; 315 (88)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read                                                                                                                         ; work         ;
+;          |rd_fifo:u_rd_fifo|                        ; 206 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo                                                                                                       ; work         ;
+;             |dcfifo:dcfifo_component|               ; 206 (0)           ; 227 (0)      ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component                                                                               ; work         ;
+;                |dcfifo_kjs1:auto_generated|         ; 206 (21)          ; 227 (72)     ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated                                                    ; work         ;
 ;                   |a_gray2bin_vab:wrptr_g_gray2bin| ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_gray2bin_vab:wrptr_g_gray2bin                    ; work         ;
 ;                   |a_gray2bin_vab:ws_dgrp_gray2bin| ; 16 (16)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_gray2bin_vab:ws_dgrp_gray2bin                    ; work         ;
 ;                   |a_graycounter_qdc:wrptr_g1p|     ; 26 (26)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_qdc:wrptr_g1p                        ; work         ;
-;                   |a_graycounter_uv6:rdptr_g1p|     ; 29 (29)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_uv6:rdptr_g1p                        ; work         ;
+;                   |a_graycounter_uv6:rdptr_g1p|     ; 31 (31)           ; 21 (21)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_uv6:rdptr_g1p                        ; work         ;
 ;                   |alt_synch_pipe_6e8:rs_dgwp|      ; 0 (0)             ; 34 (0)       ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|alt_synch_pipe_6e8:rs_dgwp                         ; work         ;
 ;                      |dffpipe_0f9:dffpipe15|        ; 0 (0)             ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|alt_synch_pipe_6e8:rs_dgwp|dffpipe_0f9:dffpipe15   ; work         ;
 ;                   |alt_synch_pipe_7e8:ws_dgrp|      ; 0 (0)             ; 34 (0)       ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|alt_synch_pipe_7e8:ws_dgrp                         ; work         ;
@@ -420,13 +420,12 @@ applicable agreement for further details.
 ;                   |altsyncram_at91:fifo_ram|        ; 59 (3)            ; 9 (9)        ; 1048576           ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram                           ; work         ;
 ;                      |decode_417:decode12|          ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|decode_417:decode12       ; work         ;
 ;                      |mux_3t7:mux13|                ; 48 (48)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|mux_3t7:mux13             ; work         ;
-;                   |cmpr_0v5:rdempty_eq_comp_msb|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|cmpr_0v5:rdempty_eq_comp_msb                       ; work         ;
 ;                   |dffpipe_3dc:rdaclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_3dc:rdaclr                                 ; work         ;
 ;                   |dffpipe_3dc:wraclr|              ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_3dc:wraclr                                 ; work         ;
 ;                   |dffpipe_ve9:ws_brp|              ; 0 (0)             ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_ve9:ws_brp                                 ; work         ;
 ;                   |dffpipe_ve9:ws_bwp|              ; 0 (0)             ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|dffpipe_ve9:ws_bwp                                 ; work         ;
 ;                   |mux_5r7:rdemp_eq_comp_lsb_mux|   ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_lsb_mux                      ; work         ;
-;                   |mux_5r7:rdemp_eq_comp_msb_mux|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_msb_mux                      ; work         ;
+;                   |mux_5r7:rdemp_eq_comp_msb_mux|   ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:rdemp_eq_comp_msb_mux                      ; work         ;
 ;                   |mux_5r7:wrfull_eq_comp_lsb_mux|  ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:wrfull_eq_comp_lsb_mux                     ; work         ;
 ;                   |mux_5r7:wrfull_eq_comp_msb_mux|  ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|mux_5r7:wrfull_eq_comp_msb_mux                     ; work         ;
 ;       |sdram_write:u_sdram_write|                   ; 123 (57)          ; 163 (56)     ; 4096              ; 0          ; 0    ; 0            ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write                                                                                                                       ; work         ;
@@ -553,10 +552,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 672   ;
+; Total registers                              ; 673   ;
 ; Number of registers using Synchronous Clear  ; 173   ;
 ; Number of registers using Synchronous Load   ; 21    ;
-; Number of registers using Asynchronous Clear ; 665   ;
+; Number of registers using Asynchronous Clear ; 666   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 242   ;
 ; Number of registers using Preset             ; 0     ;
@@ -570,7 +569,7 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; sdram_top:u_sdram_top|sdram_write:u_sdram_write|command[0]                                                                                                  ; 1       ;
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|command[2]                                                                                                    ; 1       ;
-; sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|sys_busy                                                                                              ; 24      ;
+; sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|sys_busy                                                                                              ; 27      ;
 ; sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|command[2]                                                                                            ; 1       ;
 ; sdram_top:u_sdram_top|sdram_write:u_sdram_write|command[2]                                                                                                  ; 1       ;
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|command[1]                                                                                                    ; 1       ;
@@ -579,9 +578,9 @@ Encoding Type:  One-Hot
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|command[0]                                                                                                    ; 1       ;
 ; sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|command[0]                                                                                            ; 1       ;
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_qdc:wrptr_g1p|counter8a0   ; 7       ;
-; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|rdemp_eq_comp_lsb_aeb                    ; 5       ;
-; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|rdemp_eq_comp_msb_aeb                    ; 5       ;
-; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_uv6:rdptr_g1p|counter5a0   ; 8       ;
+; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|rdemp_eq_comp_lsb_aeb                    ; 4       ;
+; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|rdemp_eq_comp_msb_aeb                    ; 4       ;
+; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_uv6:rdptr_g1p|counter5a0   ; 11      ;
 ; sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_fifo:u_wr_fifo|dcfifo:dcfifo_component|dcfifo_gjr1:auto_generated|a_graycounter_fu6:rdptr_g1p|counter5a0 ; 6       ;
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_qdc:wrptr_g1p|parity9      ; 4       ;
 ; sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|a_graycounter_uv6:rdptr_g1p|parity6      ; 4       ;
@@ -592,32 +591,32 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |uart_sdram_vga|uart_rx:u_uart_rx|cnt_RX[12]                                                                                                                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|ADDR[6]                                                                                                                        ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|ADDR[9]                                                                                                                          ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_ROW[8]                                                                                                                      ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |uart_sdram_vga|VGA_0:u_VGA_0|V_cnt[7]                                                                                                                                                         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|cnt_auto_ref[3]                                                                                                          ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|cnt_auto_ref[10]                                                                                                         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|cycle_tRAS_cnt[1]                                                                                                                ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_BANK[1]                                                                                                                     ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_COLUMN[1]                                                                                                                   ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |uart_sdram_vga|VGA_0:u_VGA_0|VGA_G[5]                                                                                                                                                         ;
-; 17:1               ; 13 bits   ; 143 LEs       ; 0 LEs                ; 143 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_ROW[6]                                                                                                                        ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 18 LEs               ; 15 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|init_state[3]                                                                                                            ;
-; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_BANK[1]                                                                                                                       ;
-; 18:1               ; 10 bits   ; 120 LEs       ; 0 LEs                ; 120 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_COLUMN[4]                                                                                                                     ;
-; 18:1               ; 23 bits   ; 276 LEs       ; 23 LEs               ; 253 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|data_cnt[12]                                                                                                                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|command[0]                                                                                                                     ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|ADDR[6]                                                                                                                                                  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|WE                                                                                                                                                       ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|mux_3t7:mux13|l3_w4_n0_mux_dataout ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |uart_sdram_vga|uart_rx:u_uart_rx|cnt_RX[2]                                                                                                                                                     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|ADDR[0]                                                                                                                         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|ADDR[8]                                                                                                                           ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_ROW[0]                                                                                                                       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |uart_sdram_vga|VGA_0:u_VGA_0|V_cnt[0]                                                                                                                                                          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|cnt_auto_ref[3]                                                                                                           ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|cnt_auto_ref[6]                                                                                                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|cycle_tRAS_cnt[0]                                                                                                                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_BANK[1]                                                                                                                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_COLUMN[2]                                                                                                                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |uart_sdram_vga|VGA_0:u_VGA_0|VGA_B[4]                                                                                                                                                          ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 18 LEs               ; 15 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref|init_state[0]                                                                                                             ;
+; 20:1               ; 13 bits   ; 169 LEs       ; 0 LEs                ; 169 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_ROW[4]                                                                                                                         ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_BANK[0]                                                                                                                        ;
+; 20:1               ; 10 bits   ; 130 LEs       ; 0 LEs                ; 130 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_COLUMN[8]                                                                                                                      ;
+; 20:1               ; 23 bits   ; 299 LEs       ; 23 LEs               ; 276 LEs                ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|data_cnt[15]                                                                                                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_write:u_sdram_write|command[0]                                                                                                                      ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|BANK[1]                                                                                                                                                   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|RAS                                                                                                                                                       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |uart_sdram_vga|sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component|dcfifo_kjs1:auto_generated|altsyncram_at91:fifo_ram|mux_3t7:mux13|l3_w10_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -1808,7 +1807,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Thu Apr 30 00:59:12 2026
+    Info: Processing started: Tue May 12 01:25:51 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart_sdram_vga -c uart_sdram_vga
 Info (11104): Parallel Compilation has detected 24 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 16 physical processors detected instead.
 Info (12021): Found 0 design units, including 0 entities, in source file src/timescale.v
@@ -1842,12 +1841,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file ip/rd_f
     Info (12023): Found entity 1: rd_fifo
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram_write.v
     Info (12023): Found entity 1: sdram_write
+Warning (10275): Verilog HDL Module Instantiation warning at sdram_top.v(161): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram_top.v
     Info (12023): Found entity 1: sdram_top
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram_read.v
     Info (12023): Found entity 1: sdram_read
 Info (12021): Found 1 design units, including 1 entities, in source file src/sdram_init_ref.v
     Info (12023): Found entity 1: sdram_init_ref
+Warning (10275): Verilog HDL Module Instantiation warning at uart_sdram_vga.v(125): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at uart_sdram_vga.v(168): ignored dangling comma in List of Port Connections
 Info (12021): Found 2 design units, including 2 entities, in source file src/uart_sdram_vga.v
     Info (12023): Found entity 1: uart_sdram_vga
     Info (12023): Found entity 2: hex_to_7seg
@@ -1861,10 +1863,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file ip/sdra
 Info (12021): Found 1 design units, including 1 entities, in source file ip/sdram_100m/sdram_100m_0002.v
     Info (12023): Found entity 1: sdram_100m_0002
 Info (12021): Found 0 design units, including 0 entities, in source file src/uart_sdram_vga_tb.v
-Warning (10236): Verilog HDL Implicit Net warning at uart_sdram_vga.v(96): created implicit net for "fifo_rd_clk"
+Warning (10236): Verilog HDL Implicit Net warning at uart_sdram_vga.v(107): created implicit net for "fifo_rd_clk"
 Info (12127): Elaborating entity "uart_sdram_vga" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(152): object "bank_r" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(153): object "row_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(177): object "bank_r" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at uart_sdram_vga.v(178): object "row_r" assigned a value but never read
 Info (12128): Elaborating entity "sdram_100m" for hierarchy "sdram_100m:u_sdram_100m"
 Info (12128): Elaborating entity "sdram_100m_0002" for hierarchy "sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst"
 Info (12128): Elaborating entity "altera_pll" for hierarchy "sdram_100m:u_sdram_100m|sdram_100m_0002:sdram_100m_inst|altera_pll:altera_pll_i"
@@ -1936,10 +1938,10 @@ Info (12133): Instantiated megafunction "sdram_100m:u_sdram_100m|sdram_100m_0002
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "sdram_top" for hierarchy "sdram_top:u_sdram_top"
-Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(60): object "command" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(60): object "init_ref_command" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(60): object "write_command" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(60): object "read_command" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(67): object "command" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(67): object "init_ref_command" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(67): object "write_command" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at sdram_top.v(67): object "read_command" assigned a value but never read
 Info (12128): Elaborating entity "sdram_init_ref" for hierarchy "sdram_top:u_sdram_top|sdram_init_ref:u_sdram_init_ref"
 Warning (10230): Verilog HDL assignment warning at sdram_init_ref.v(77): truncated value with size 32 to match size of target (13)
 Warning (10230): Verilog HDL assignment warning at sdram_init_ref.v(84): truncated value with size 32 to match size of target (4)
@@ -2032,37 +2034,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_1v5
 Info (12128): Elaborating entity "cmpr_1v5" for hierarchy "sdram_top:u_sdram_top|sdram_write:u_sdram_write|wr_fifo:u_wr_fifo|dcfifo:dcfifo_component|dcfifo_gjr1:auto_generated|cmpr_1v5:rdempty_eq_comp"
 Info (12128): Elaborating entity "sdram_read" for hierarchy "sdram_top:u_sdram_top|sdram_read:u_sdram_read"
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(90): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(100): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(103): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(106): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(114): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(116): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(120): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(122): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(126): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(128): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(131): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(97): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(107): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(110): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(113): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(121): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(123): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(127): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(129): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at sdram_read.v(133): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(136): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(139): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(148): truncated value with size 32 to match size of target (23)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(154): truncated value with size 32 to match size of target (23)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(166): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(168): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(172): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(174): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(178): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(180): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(183): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(135): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(138): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(140): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(143): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(146): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(155): truncated value with size 32 to match size of target (23)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(161): truncated value with size 32 to match size of target (23)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(173): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(175): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(179): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(181): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at sdram_read.v(185): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(188): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(198): truncated value with size 32 to match size of target (23)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(204): truncated value with size 32 to match size of target (23)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(212): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(215): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(187): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(190): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(192): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(195): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(205): truncated value with size 32 to match size of target (23)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(211): truncated value with size 32 to match size of target (23)
 Warning (10230): Verilog HDL assignment warning at sdram_read.v(219): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at sdram_read.v(221): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(222): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(226): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at sdram_read.v(228): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "rd_fifo" for hierarchy "sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo"
 Info (12128): Elaborating entity "dcfifo" for hierarchy "sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component"
 Info (12130): Elaborated megafunction instantiation "sdram_top:u_sdram_top|sdram_read:u_sdram_read|rd_fifo:u_rd_fifo|dcfifo:dcfifo_component"
@@ -2128,9 +2130,9 @@ Info (12128): Elaborating entity "mux_5r7" for hierarchy "sdram_top:u_sdram_top|
 Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:u_uart_rx"
 Warning (10036): Verilog HDL or VHDL warning at uart_rx.v(25): object "data_ready" assigned a value but never read
 Info (12128): Elaborating entity "VGA_0" for hierarchy "VGA_0:u_VGA_0"
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(23): truncated value with size 32 to match size of target (21)
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(171): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at VGA_0.v(172): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(157): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(192): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at VGA_0.v(193): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "PLL_108" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll"
 Info (12128): Elaborating entity "PLL_108_0002" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst"
 Info (12128): Elaborating entity "altera_pll" for hierarchy "VGA_0:u_VGA_0|PLL_108:u_pll|PLL_108_0002:pll_108_inst|altera_pll:altera_pll_i"
@@ -2335,17 +2337,17 @@ Warning (20013): Ignored assignments for entity "PLL_65_95_0002" -- entity does 
 Info (144001): Generated suppressed messages file D:/Altera13.1/Projects/uart_sdram_vga/output_files/uart_sdram_vga.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 11 node(s), including 0 DDIO, 3 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2401 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2413 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 94 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 2141 logic cells
+    Info (21061): Implemented 2153 logic cells
     Info (21064): Implemented 144 RAM segments
     Info (21065): Implemented 3 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 135 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Thu Apr 30 00:59:15 2026
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 138 warnings
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Tue May 12 01:25:56 2026
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

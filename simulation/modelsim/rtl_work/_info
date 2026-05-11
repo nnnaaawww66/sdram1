@@ -9,42 +9,42 @@ z2
 cModel Technology
 Z0 dD:/Altera13.1/Projects/uart_sdram_vga/simulation/modelsim
 T_opt
-!s110 1777468703
-VjF2zT;]MoGZQbgY01bo003
+!s110 1778519506
+Vz0LgX3G>`YgP1KfE7KON11
 04 17 4 work uart_sdram_vga_tb fast 0
-=1-b025aa719e5c-69f2051e-266-5300
+=1-b025aa719e5c-6a020dd2-162-3f54
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.4;61
 vhex_to_7seg
-Z1 !s110 1777468701
+Z1 !s110 1778519504
 !i10b 1
-!s100 L3;c?bj7nYfdFS<M3l9PZ2
-I`f@<nENUJb0][caQ4P6oE1
+!s100 U]_B0Dac8O2Inm?B?zF?82
+ID0hZNIVKOP[Wf1FJ^khm;2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1777382712
+Z3 w1778500024
 Z4 8D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga.v
 Z5 FD:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga.v
-L0 180
+L0 199
 Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1777468701.817000
+Z7 !s108 1778519504.764000
 Z8 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga.v|
 !i113 0
 Z10 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z11 !s92 -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vmt48lc16m16a2
-Z12 !s110 1777468702
+Z12 !s110 1778519505
 !i10b 1
-!s100 DJPSCYU?oWlInV=@8kNda1
-IXQ5Tm;L=;lYb4:hRYzR<>0
+!s100 h9Y?52DcLffhCUXM@AlHK1
+IRoVVd6aDiF]I>LDUUG]LN1
 R2
 R0
-w1777395254
+Z13 w1778519473
 8D:/Altera13.1/Projects/uart_sdram_vga/src/mt48lc16m16a2.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/mt48lc16m16a2.v
 L0 52
@@ -52,56 +52,56 @@ R6
 r1
 !s85 0
 31
-Z13 !s108 1777468702.122000
-Z14 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/timescale.v|D:/Altera13.1/Projects/uart_sdram_vga/src/mt48lc16m16a2.v|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v|
-Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v|
+Z14 !s108 1778519505.359000
+Z15 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/disp_param_conf.v|D:/Altera13.1/Projects/uart_sdram_vga/src/timescale.v|D:/Altera13.1/Projects/uart_sdram_vga/src/mt48lc16m16a2.v|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v|
 !i113 0
 R10
 R11
 vPLL_108
-Z16 !s110 1777468700
+Z17 !s110 1778519502
 !i10b 1
-!s100 DWZ@T2R3^fnaZZVDg3RkR0
-IJUD;jVQj`HNb@:BgP75ES2
+!s100 DFVRTl??aTLNiVNAIW5gG3
+IVNE2>N7Tn4X;5]FNj]lmd2
 R2
 R0
-w1775385433
+w1777478932
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_108_sim/PLL_108.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_108_sim/PLL_108.vo
-Z17 L0 31
+Z18 L0 31
 R6
 r1
 !s85 0
 31
-!s108 1777468700.818000
+!s108 1778519502.636000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_108_sim/PLL_108.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_108_sim/PLL_108.vo|
 !i113 0
-Z18 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 n@p@l@l_108
 vPLL_25_36_75
-R1
+Z20 !s110 1778519503
 !i10b 1
-!s100 `R8`585aVSccQe:j6dk[:1
-IfAK[ICzff;cZ0Cll5n`SL0
+!s100 UbZ]F@[177d^l`LdjEUS60
+ISj:a8V8`n@mk0LmEHUjJ?3
 R2
 R0
-w1775405610
+w1777481424
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75_sim/PLL_25_36_75.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75_sim/PLL_25_36_75.vo
-R17
+R18
 R6
 r1
 !s85 0
 31
-!s108 1777468701.124000
+!s108 1778519503.318000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75_sim/PLL_25_36_75.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75_sim/PLL_25_36_75.vo|
 !i113 0
-R18
+R19
 n@p@l@l_25_36_75
 vPLL_40_56
-R1
+R20
 !i10b 1
 !s100 b4NAId5LeHeH`RZ6Q@cSl2
 I7l]aW?__jjkZb_8^K=6aA2
@@ -110,19 +110,19 @@ R0
 w1775385076
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56_sim/PLL_40_56.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56_sim/PLL_40_56.vo
-R17
+R18
 R6
 r1
 !s85 0
 31
-!s108 1777468701.050000
+!s108 1778519503.172000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56_sim/PLL_40_56.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56_sim/PLL_40_56.vo|
 !i113 0
-R18
+R19
 n@p@l@l_40_56
 vPLL_49
-R16
+R17
 !i10b 1
 !s100 5UOJbcW2Lm<U79[@YePF:3
 I:DL42K=0Hnd8f0MicGY@c1
@@ -131,19 +131,19 @@ R0
 w1775385162
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_49_sim/PLL_49.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_49_sim/PLL_49.vo
-R17
+R18
 R6
 r1
 !s85 0
 31
-!s108 1777468700.971000
+!s108 1778519502.914000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_49_sim/PLL_49.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_49_sim/PLL_49.vo|
 !i113 0
-R18
+R19
 n@p@l@l_49
 vPLL_65_95
-R16
+R17
 !i10b 1
 !s100 DI1dgGXg?^ZID]7oA39KY0
 Ibl0IlaJR@aR@8k`nNmA6[2
@@ -152,16 +152,16 @@ R0
 w1775385265
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_65_95_sim/PLL_65_95.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_65_95_sim/PLL_65_95.vo
-R17
+R18
 R6
 r1
 !s85 0
 31
-!s108 1777468700.894000
+!s108 1778519502.789000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_65_95_sim/PLL_65_95.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_65_95_sim/PLL_65_95.vo|
 !i113 0
-R18
+R19
 n@p@l@l_65_95
 vrd_fifo
 R1
@@ -173,19 +173,19 @@ R0
 w1776662553
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/rd_fifo.v
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/rd_fifo.v
-Z19 L0 39
+Z21 L0 39
 R6
 r1
 !s85 0
 31
-!s108 1777468701.430000
+!s108 1778519504.016000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/rd_fifo.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip|D:/Altera13.1/Projects/uart_sdram_vga/ip/rd_fifo.v|
 !i113 0
 R10
-Z20 !s92 -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z22 !s92 -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vsdram_100m
-R1
+R20
 !i10b 1
 !s100 J7EE@6RjmFnG]9?[TVSSK2
 I:je8mgLmYkLSV[JbJKazz1
@@ -194,16 +194,16 @@ R0
 w1776615859
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m_sim/sdram_100m.vo
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m_sim/sdram_100m.vo
-R17
+R18
 R6
 r1
 !s85 0
 31
-!s108 1777468701.199000
+!s108 1778519503.506000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m_sim/sdram_100m.vo|
 !s90 -reportprogress|300|D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m_sim/sdram_100m.vo|
 !i113 0
-R18
+R19
 vsdram_init_ref
 R1
 !i10b 1
@@ -211,7 +211,7 @@ R1
 I>hg^Xn=<mEQEIm;JX2F:b3
 R2
 R0
-Z21 w1777313080
+w1777313080
 8D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_init_ref.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/sdram_init_ref.v
 L0 1
@@ -219,7 +219,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.740000
+!s108 1778519504.615000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_init_ref.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_init_ref.v|
 !i113 0
@@ -228,11 +228,11 @@ R11
 vsdram_read
 R1
 !i10b 1
-!s100 7ZXgknMLi7KO6iM^RnzKa0
-IK:U[XQ;5e?G[Gc4<`9CZo3
+!s100 `Q:j;]Dj0j2eS44C;G3Lz3
+I<@YHh=k@j8jJ;4L9On4QI1
 R2
 R0
-w1777461446
+w1778519399
 8D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_read.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/sdram_read.v
 L0 1
@@ -240,7 +240,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.662000
+!s108 1778519504.444000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_read.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_read.v|
 !i113 0
@@ -249,11 +249,11 @@ R11
 vsdram_top
 R1
 !i10b 1
-!s100 n@6H5KCggMeSJdVeO55H63
-I502X_Sn_zR^BL=eXmL8FM1
+!s100 nCGG5dJ=OIIGX4z=jAPe_0
+Ig]QOg[i6L4fN=5AgGC_1H2
 R2
 R0
-R21
+w1778500046
 8D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_top.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/sdram_top.v
 L0 1
@@ -261,7 +261,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.584000
+!s108 1778519504.282000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_top.v|
 !i113 0
@@ -282,14 +282,14 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.509000
+!s108 1778519504.163000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_write.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/sdram_write.v|
 !i113 0
 R10
 R11
 vseg_Decoder
-R1
+R20
 !i10b 1
 !s100 z;Uz^bi5P@;UY?YD13kAK2
 IiblT6lT9>B=IgR[02BO6R0
@@ -303,7 +303,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.278000
+!s108 1778519503.698000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/seg_Decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/seg_Decoder.v|
 !i113 0
@@ -311,7 +311,7 @@ R10
 R11
 nseg_@decoder
 vuart_rx
-R1
+R12
 !i10b 1
 !s100 C5:7A43NbNF>kLGzIPCMQ2
 IAI>F7Yn2F@<=RdG72`G;82
@@ -325,7 +325,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468701.967000
+!s108 1778519505.060000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/uart_rx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/uart_rx.v|
 !i113 0
@@ -334,8 +334,8 @@ R11
 vuart_sdram_vga
 R1
 !i10b 1
-!s100 k:]1;P;o3mTEkW;[`[4dX1
-IWT_SND9kG55ca^f>G2eAP0
+!s100 J[RZ`7aBMZ9KE@XF=lifZ2
+IHRJ=_6HMgSMH:RCFdU^_O2
 R2
 R0
 R3
@@ -355,32 +355,32 @@ R11
 vuart_sdram_vga_tb
 R12
 !i10b 1
-!s100 SgI;]jEbRzSoR53FLI24;2
-Ic74BXPDb7dn04OSkk3XkG2
+!s100 mChMc:V:7z3nai@o`__em2
+I0<Vd]NIi4=GL4:1V>OCNf3
 R2
 R0
-R21
+R13
 8D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v
-L0 9
+L0 8
 R6
 r1
 !s85 0
 31
-R13
 R14
 R15
+R16
 !i113 0
 R10
 R11
 vVGA_0
 R12
 !i10b 1
-!s100 G1?kIo1YX0hSEXPi@hkn23
-IhWZ;E;<ZA;n76@L:MgEVk1
+!s100 3mUm;lMYR<mECiO`j3^hP3
+I493@XLaZBE[n8KYXMAH_`3
 R2
 R0
-w1777456233
+w1778495063
 8D:/Altera13.1/Projects/uart_sdram_vga/src/VGA_0.v
 FD:/Altera13.1/Projects/uart_sdram_vga/src/VGA_0.v
 L0 2
@@ -388,7 +388,7 @@ R6
 r1
 !s85 0
 31
-!s108 1777468702.043000
+!s108 1778519505.217000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/src/disp_param_conf.v|D:/Altera13.1/Projects/uart_sdram_vga/src/VGA_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/src|D:/Altera13.1/Projects/uart_sdram_vga/src/VGA_0.v|
 !i113 0
@@ -396,7 +396,7 @@ R10
 R11
 n@v@g@a_0
 vwr_fifo
-R1
+R20
 !i10b 1
 !s100 MZ<JLVX]EQ[`6V>V0z>G@3
 IW@B8FKkGTdP0M53ZXP3=h3
@@ -405,14 +405,14 @@ R0
 w1776081163
 8D:/Altera13.1/Projects/uart_sdram_vga/ip/wr_fifo.v
 FD:/Altera13.1/Projects/uart_sdram_vga/ip/wr_fifo.v
-R19
+R21
 R6
 r1
 !s85 0
 31
-!s108 1777468701.356000
+!s108 1778519503.857000
 !s107 D:/Altera13.1/Projects/uart_sdram_vga/ip/wr_fifo.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip|D:/Altera13.1/Projects/uart_sdram_vga/ip/wr_fifo.v|
 !i113 0
 R10
-R20
+R22

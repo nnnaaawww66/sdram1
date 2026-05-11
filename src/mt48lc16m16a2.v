@@ -149,7 +149,7 @@ module mt48lc16m16a2 (Dq, Addr, Ba, Clk, Cke, Cs_n, Ras_n, Cas_n, We_n, Dqm);
     // Write Burst Mode
     wire      Write_burst_mode = Mode_reg[9];
 
-    wire      Debug            = 1'b1;                          // Debug messages : 1 = On
+    wire      Debug            = 1'b0;                          // Debug messages : 1 = On
     wire      Dq_chk           = Sys_clk & Data_in_enable;      // Check setup/hold time for DQ
     
     assign    Dq               = Dq_reg;                        // DQ buffer
@@ -217,16 +217,29 @@ module mt48lc16m16a2 (Dq, Addr, Ba, Clk, Cke, Cs_n, Ras_n, Cas_n, We_n, Dqm);
 `endif
 
 `ifdef PRELOAD_RAM // Added jb
-       $display("* Preloading SDRAM bank 0.\n");
-       // Uses the vmem file for the internal SRAM, so words are 32-bits wide
-       // and we need to copy them into the 16-bit wide array, which the simulator
-       // can't figure out how to do, so we'll do it manually here.
+       $display("* Preloading all SDRAM banks with same data.\n");
+       
+       // 加载数据到临时数组
        $readmemh("sram.vmem", Bank0_32bit);
-       for (mem_cnt=0;mem_cnt < (mem_sizes/2); mem_cnt = mem_cnt + 1)
-	 begin
-	    Bank0[(mem_cnt*2)+1] = Bank0_32bit[mem_cnt][15:0];
-	    Bank0[(mem_cnt*2)] = Bank0_32bit[mem_cnt][31:16];
-	 end
+       
+       // 将相同的数据复制到所有4个 Bank
+       for (mem_cnt=0; mem_cnt < (mem_sizes/2); mem_cnt = mem_cnt + 1) begin
+           // Bank 0
+           Bank0[(mem_cnt*2)+1] = Bank0_32bit[mem_cnt][15:0];
+           Bank0[(mem_cnt*2)] = Bank0_32bit[mem_cnt][31:16];
+           
+           // Bank 1
+           Bank1[(mem_cnt*2)+1] = Bank0_32bit[mem_cnt][15:0];
+           Bank1[(mem_cnt*2)] = Bank0_32bit[mem_cnt][31:16];
+           
+           // Bank 2
+           Bank2[(mem_cnt*2)+1] = Bank0_32bit[mem_cnt][15:0];
+           Bank2[(mem_cnt*2)] = Bank0_32bit[mem_cnt][31:16];
+           
+           // Bank 3
+           Bank3[(mem_cnt*2)+1] = Bank0_32bit[mem_cnt][15:0];
+           Bank3[(mem_cnt*2)] = Bank0_32bit[mem_cnt][31:16];
+       end
 `endif
 end
 

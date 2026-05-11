@@ -61,10 +61,6 @@ vlog "D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_40_56_sim/PLL_40_56.vo"
 vlog "D:/Altera13.1/Projects/uart_sdram_vga/ip/PLL_25_36_75_sim/PLL_25_36_75.vo"
 vlog "D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m_sim/sdram_100m.vo"    
 
-vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip {D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m.vo}
-vlib sdram_100m
-vmap sdram_100m sdram_100m
-vlog -vlog01compat -work sdram_100m +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip {D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m.v}
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src {D:/Altera13.1/Projects/uart_sdram_vga/src/seg_Decoder.v}
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip {D:/Altera13.1/Projects/uart_sdram_vga/ip/wr_fifo.v}
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip {D:/Altera13.1/Projects/uart_sdram_vga/ip/rd_fifo.v}
@@ -76,11 +72,10 @@ vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src 
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src {D:/Altera13.1/Projects/uart_sdram_vga/src/disp_param_conf.v}
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src {D:/Altera13.1/Projects/uart_sdram_vga/src/uart_rx.v}
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src {D:/Altera13.1/Projects/uart_sdram_vga/src/VGA_0.v}
-vlog -vlog01compat -work sdram_100m +incdir+D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m {D:/Altera13.1/Projects/uart_sdram_vga/ip/sdram_100m/sdram_100m_0002.v}
 
 vlog -vlog01compat -work work +incdir+D:/Altera13.1/Projects/uart_sdram_vga/src {D:/Altera13.1/Projects/uart_sdram_vga/src/uart_sdram_vga_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -L sdram_100m -voptargs="+acc"  uart_sdram_vga_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  uart_sdram_vga_tb
 
 add wave *
 view structure

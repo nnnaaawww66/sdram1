@@ -1,4 +1,5 @@
 `include "disp_param_conf.v"
+//`define debug 1
 module VGA_0(
 	input sys_clk_50m,
 	input rst_n,
@@ -18,10 +19,15 @@ module VGA_0(
 	
 	output [20:0] data_amount,
 	output read_en
+	
+	`ifdef dubug
+	,
+	output reg [11:0] debug_H_cnt,
+	output reg [11:0] debug_V_cnt
+	`endif
 );
 
-assign data_amount=`H_Data * `V_Data ;
-assign read_en=VGA_BLANK_N & ~fifo_empty;
+
 
 //PLL
 wire clk_25m, clk_36m, clk_75m;
@@ -136,6 +142,21 @@ parameter V_Data_start = `V_Sync + `V_Back_Porch - 1;
 parameter V_Data_end = `V_Sync + `V_Back_Porch + `V_Data - 1;
 parameter V_end = `V_Total - 1;
 
+reg first_start;
+//first start
+always@(posedge VGA_CLK or negedge rst_n)
+	if(!rst_n)
+		first_start<=0;
+	else if(fifo_empty)
+		first_start<=0;
+	else if(H_cnt>H_Data_start && V_cnt>V_Data_start && fifo_empty && first_start==0)
+		first_start<=0;
+	else if(H_cnt<=H_Data_start && V_cnt<=V_Data_start && !fifo_empty && first_start==0)
+		first_start<=1;
+		
+assign data_amount=`H_Data * `V_Data ;
+assign read_en=VGA_BLANK_N & ~fifo_empty & first_start;
+
 always@(posedge VGA_CLK or negedge sys_rst_n)
 	if(!sys_rst_n)
 		H_cnt<=0;
@@ -180,6 +201,19 @@ always@(posedge VGA_CLK or negedge sys_rst_n)
 		{VGA_R,VGA_G,VGA_B}<=0;
 	else if(VGA_BLANK_N)
 		{VGA_R,VGA_G,VGA_B}<=DATA;
+		
+`ifdef dubug
+//debug_H_cnt and debug_V_cnt
+always@(posedge VGA_CLK or negedge sys_rst_n)
+	if(!sys_rst_n)begin
+		debug_H_cnt <= 12'd0;
+		debug_V_cnt <= 12'd0;
+	end
+	else if(VGA_BLANK_N)begin
+		debug_H_cnt <= H_cnt - H_Data_start - 1;
+		debug_V_cnt <= V_cnt - V_Data_start;
+	end
+`endif
 		
 
 endmodule 

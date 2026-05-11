@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dD:/Altera13.1/Projects/uart_sdram_vga/simulation/modelsim
 va_graycounter
-Z1 !s110 1777468696
+Z1 !s110 1778519496
 !i10b 1
 !s100 FI?[k<oCFi9HWYigXHGcf0
 IB:Qha4j6ND1f;k;E9^cGP2
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1777468695.976000
+Z7 !s108 1778519495.999000
 Z8 !s107 d:/altera13.1/13.1/quartus/eda/sim_lib/altera_mf.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_mf_ver|d:/altera13.1/13.1/quartus/eda/sim_lib/altera_mf.v|
 !i113 0
@@ -350,7 +350,7 @@ R9
 R10
 n@a@l@t@e@r@a_@d@e@v@i@c@e_@f@a@m@i@l@i@e@s
 vALTERA_MF_HINT_EVALUATION
-Z11 !s110 1777468695
+R1
 !i10b 1
 !s100 a=Fe>V8[JB19QF`<JB2a80
 IoIJKCK[GDWm8zh7>jbhOn3
@@ -371,7 +371,7 @@ R9
 R10
 n@a@l@t@e@r@a_@m@f_@h@i@n@t_@e@v@a@l@u@a@t@i@o@n
 vALTERA_MF_MEMORY_INITIALIZATION
-R11
+R1
 !i10b 1
 !s100 1;fUiNdohROUTkB`ZS<H92
 IF86Fcmzz;TPREHagl1E<Y0
@@ -1092,7 +1092,7 @@ R9
 !i113 0
 R10
 vlcell
-R11
+R1
 !i10b 1
 !s100 bennFdYA;E0lM[zHEL7e`1
 I`N5MIjk^HW]TV[YB5@T541

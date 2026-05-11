@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dD:/Altera13.1/Projects/uart_sdram_vga/simulation/modelsim
 valt_bidir_buf
-Z1 !s110 1777468694
+Z1 !s110 1778519494
 !i10b 1
 !s100 a6?6cHeC]_[b_;=i8O1hN3
 I[oEd@z_DUciK:LL0VVkjB3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1382637188
+Z3 w1777541902
 Z4 8d:/altera13.1/13.1/quartus/eda/sim_lib/altera_primitives.v
 Z5 Fd:/altera13.1/13.1/quartus/eda/sim_lib/altera_primitives.v
 L0 1113
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1777468694.900000
+Z7 !s108 1778519494.006000
 Z8 !s107 d:/altera13.1/13.1/quartus/eda/sim_lib/altera_primitives.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|altera_ver|d:/altera13.1/13.1/quartus/eda/sim_lib/altera_primitives.v|
 !i113 0
@@ -411,8 +411,8 @@ R10
 vglobal
 R1
 !i10b 1
-!s100 lKmX7;gI`XO0>GV6il];01
-IOcchFFCg7@84IKV9KAHbM1
+!s100 c08O48?VP<m2:hlHmHLb>1
+IS0OMI^FzHADbU5lB5z^zW0
 R2
 R0
 R3
@@ -693,8 +693,8 @@ R10
 vsoft
 R1
 !i10b 1
-!s100 ;;iS>g<=H3GT6Kd?L3F?M3
-I29JfBV65h3e6Rm]`?GCF?0
+!s100 G`;:HHVLS6BO9KCcHAai:1
+I10Fl7?db^DSahn9[lNz4K1
 R2
 R0
 R3

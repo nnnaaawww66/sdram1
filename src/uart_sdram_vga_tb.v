@@ -1,10 +1,10 @@
 // synthesis translate_off
 `timescale 1ns / 10ps
 `include "mt48lc16m16a2.v"
+`include "disp_param_conf.v"
 
-`define write_test 1
-
-`ifdef write_test
+`define debug_u 1
+//`define debug 1
 
 module uart_sdram_vga_tb();
 
@@ -37,6 +37,14 @@ wire        VGA_HS, VGA_VS, VGA_CLK;
 // Segment Display
 wire [6:0]  seg_w0, seg_w1, seg_r0, seg_r1, seg_r2, seg_r3;
 
+`ifdef dubug
+wire [15:0] debug_data_out;
+wire debug_read_en;
+wire [11:0] debug_H_cnt;
+wire [11:0] debug_V_cnt;
+wire [22:0] debug_data_cnt;
+`endif
+
 // ===================== DUT Instance =====================
 uart_sdram_vga u_dut (
     .Clk                 (Clk),
@@ -63,7 +71,15 @@ uart_sdram_vga u_dut (
     .read_wrusedw_seg3   (seg_r3),
     .read_wrusedw_seg2   (seg_r2),
     .read_wrusedw_seg1   (seg_r1),
-    .read_wrusedw_seg0   (seg_r0)
+    .read_wrusedw_seg0   (seg_r0),
+	 
+	 `ifdef dubug
+	 .debug_data_out(debug_data_out),
+	 .debug_read_en(debug_read_en),
+	 .debug_H_cnt(debug_H_cnt),
+	 .debug_V_cnt(debug_V_cnt),
+	 .debug_data_cnt(debug_data_cnt)
+	 `endif
 );
 
 // ===================== SDRAM Simulation Model =====================
@@ -106,7 +122,7 @@ task send_pixel_data(input integer count);
     begin
         $display("[%t] Start sending data: total = %d", $time, count);
         
-        for (p = 2; p <= count; p = p + 1) begin
+        for (p = 1; p <= count; p = p + 1) begin
             pixel_val = p[15:0];
             uart_send_byte(pixel_val[15:8]);
             uart_send_byte(pixel_val[7:0]);
@@ -138,13 +154,28 @@ initial begin
     $stop;
 end
 
-//// Waveform dump
-//initial begin
-//    $fsdbDumpfile("wave.fsdb");
-//    $fsdbDumpvars(0, uart_sdram_vga_tb);
-//end
+`ifdef debug_u
+// ===================== Monitor debug_data_out with Counter =====================
+integer print_counter = 0;  // 声明计数器
+
+always @(posedge VGA_CLK) begin
+    if (debug_read_en) begin
+        if (print_counter >= `H_Data * `V_Data)
+            print_counter = 1;
+        else
+            print_counter = print_counter + 1;
+        
+        // 先打印前半部分（不换行）
+        $write("[%t]data_cnt= %0d, debug_data_out[%0d] = %0d, Pixel Position: Row[", 
+               $time, debug_data_cnt, print_counter, debug_data_out);
+        
+        // 延迟1ns后再打印后半部分（并换行）
+        #1;
+        $display("%0d] Col[%0d]", debug_V_cnt, debug_H_cnt);
+    end
+end
+`endif
 
 endmodule
 
-`endif
 // synthesis translate_on

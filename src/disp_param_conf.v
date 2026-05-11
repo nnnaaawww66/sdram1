@@ -10,18 +10,19 @@
 `define Resolution_1280x1024_60Hz 1    // 108MHz
 
 `ifdef test
+`define fifo_clk 			 clk_108m_rev
 `define PIXEL_CLK        clk_108m
 `define H_Sync           1   
-`define H_Back_Porch     1  
-`define H_Data           3
-`define H_Front_Porch    1   
-`define H_Total          6  
+`define H_Back_Porch     5
+`define H_Data           100
+`define H_Front_Porch    4  
+`define H_Total          110  
 
 `define V_Sync           1
-`define V_Back_Porch     1
-`define V_Data           3
-`define V_Front_Porch    1
-`define V_Total          6
+`define V_Back_Porch     3
+`define V_Data           100
+`define V_Front_Porch    6
+`define V_Total          110
 `endif
 
 // ==============================

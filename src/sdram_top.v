@@ -1,3 +1,5 @@
+//`define debug 1
+
 module sdram_top(
 	input Clk_100m,
 	input rst_n,
@@ -31,6 +33,11 @@ module sdram_top(
 	output [12:0] ADDR,
 	output [1:0] BANK,
 	inout [15:0] DQ	
+	
+	`ifdef dubug
+	,
+	output [22:0] debug_data_cnt
+	`endif
 );
 
 wire sys_busy , sys_req , write_busy , write_req , read_busy , read_req;
@@ -146,7 +153,11 @@ sdram_read u_sdram_read(
 	.DQM(read_DQM),
 	.ADDR(read_ADDR),
 	.BANK(read_BANK),
-	.DQ(read_DQ)	
+	.DQ(read_DQ),
+	
+	`ifdef dubug
+	.debug_data_cnt(debug_data_cnt)
+	`endif
 );
 
 endmodule 

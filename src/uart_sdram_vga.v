@@ -1,3 +1,5 @@
+//`define debug 1
+
 module uart_sdram_vga(
     input Clk,
     input rst_n,
@@ -31,6 +33,15 @@ module uart_sdram_vga(
     output [6:0] read_wrusedw_seg2,
     output [6:0] read_wrusedw_seg1,
     output [6:0] read_wrusedw_seg0
+	 
+	 `ifdef dubug
+	 ,
+	 output [15:0] debug_data_out,
+	 output debug_read_en,
+	 output [11:0] debug_H_cnt,
+	 output [11:0] debug_V_cnt,
+	 output [22:0] debug_data_cnt
+	 `endif
 );
 
 wire locked;
@@ -106,7 +117,11 @@ sdram_top u_sdram_top(
     .DQM(DQM),
     .ADDR(ADDR),
     .BANK(BANK),
-    .DQ(DQ) 
+    .DQ(DQ),
+	 
+	 `ifdef dubug
+	 .debug_data_cnt(debug_data_cnt) 
+	 `endif
 );
 
 uart_rx u_uart_rx(
@@ -144,8 +159,18 @@ VGA_0 u_VGA_0(
     .VGA_SYNC_N(VGA_SYNC_N),
     
     .data_amount(data_amount),
-    .read_en(read_en)
+    .read_en(read_en),
+	 
+	 `ifdef dubug
+	 .debug_H_cnt(debug_H_cnt),
+	 .debug_V_cnt(debug_V_cnt)
+	 `endif
 );
+
+`ifdef dubug
+assign debug_read_en=read_en;
+assign debug_data_out=read_en?data_out:16'hz;
+`endif
 
 // ===================== 显示刷新寄存器 =====================
 reg [9:0]  col_r;
